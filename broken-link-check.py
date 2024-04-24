@@ -51,17 +51,23 @@ def check_url(url):
                 # Final URL status check
                 if response.status_code == 200:
                     print(f"Successfully redirected to {response.url} with status 200")
+                    return False
                 else:
                     print(f"Ended with status {response.status_code} at {response.url}")
+                    return True
             else:
                 print(f"Initial status code {response.status_code} at {url}")
+                return False
 
         except requests.Timeout:
             print("Timeout occurred while checking URL")
+            return True
         except requests.TooManyRedirects:
             print("Too many redirects")
+            return True
         except requests.RequestException as e:
             print(f"Request failed: {e}")
+            return True
 
 
 try:
@@ -79,7 +85,8 @@ try:
 
     # Loop through each link in the JSON
     for link in data['links']:
-        check_url(link['url'])
+        if(check_url(link['url'])):
+            broken_links.append(link)     
 
     # Print or save the broken links as needed
     with open('broken_links.json', 'w') as f:
