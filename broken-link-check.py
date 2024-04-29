@@ -1,7 +1,9 @@
 import requests
 import json
 import os
+import time
 from tkinter import Tk, filedialog
+from urllib.parse import urlparse
 
 
 def get_file_path():
@@ -45,8 +47,22 @@ try:
     # Loop through each link in the JSON
     for link in data['links']:
         try:
-            # Check the status code of the URL
-            response = requests.get(link['url'], allow_redirects=True, timeout=10)
+            # Parse the URL to get the domain
+            parsed_url = urlparse(link['url'])
+            domain = parsed_url.netloc
+
+            # Check if the domain is from the ASCD site
+            if 'ascd.org' in domain:
+                # Make the initial request
+                response = requests.get(link['url'], allow_redirects=True, timeout=10)
+                # Wait for 5 seconds before checking the status code
+                time.sleep(5)
+                # Refresh the response after 5 seconds to get the latest status
+                response = requests.get(link['url'], allow_redirects=True, timeout=10)
+            else:
+                # For other domains, proceed as usual
+                response = requests.get(link['url'], allow_redirects=True, timeout=10)
+
             if response.status_code == 404:
                 # If 404, add to the broken_links list
                 print(f"Broken link: {link['url']}")
