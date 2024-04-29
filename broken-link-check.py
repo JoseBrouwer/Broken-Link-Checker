@@ -1,7 +1,6 @@
 import requests
 import json
 import os
-import time
 from tkinter import Tk, filedialog
 from urllib.parse import urlparse
 
