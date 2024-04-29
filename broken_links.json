@@ -1,9 +1,65 @@
 [
     {
-        "linkId": "1",
-        "title": "Deciding to Teach Them All",
-        "url": "http://www.ascd.org/publications/educational-leadership/oct03/vol61/num02/Deciding-to-Teach-Them-All.aspx",
-        "tags": "etpswd,unit1,resource,tswd,tswd-unit3",
+        "linkId": "61",
+        "title": "International Literacy Association",
+        "url": "http://www.reading.org/",
+        "tags": "etpswd,unit2,resource",
+        "isExternal": true
+    },
+    {
+        "linkId": "107",
+        "title": "Marzano Art and Science of Teaching Framework Learning Map",
+        "url": "https://www.k12.wa.us/sites/default/files/public/tpep/frameworks/marzano/marzano_learning_map.pdf",
+        "tags": "etpswd,unit3,resource",
+        "isExternal": true
+    },
+    {
+        "linkId": "151",
+        "title": "Social Studies and Personalized learning: Emerging Promising Practices From the Field",
+        "url": "http://www.centeril.org/2016Handbook/resources/Woyshner_chapter_web.pdf",
+        "tags": "etpswd,unit5,resource",
+        "isExternal": true
+    },
+    {
+        "linkId": "175",
+        "title": "Florida's Exceptional Student Education Personal Development Portal",
+        "url": "http://pdportal.florida-ese.org/",
+        "tags": "etpswd,unit5,resource",
+        "isExternal": true
+    },
+    {
+        "linkId": "177",
+        "title": "Think-Alouds",
+        "url": "https://www.readingrockets.org/content/pdfs/thinkaloud_checklist.pdf",
+        "tags": "etpswd,unit5,resource",
+        "isExternal": true
+    },
+    {
+        "linkId": "184",
+        "title": "Class-wide Peer Tutoring",
+        "url": "https://dev.fl-pda.org/independent/courses/EPTSWD/docs/ClasswidePeerTutoring.pdf",
+        "tags": "etpswd,unit5,resource",
+        "isExternal": true
+    },
+    {
+        "linkId": "193",
+        "title": "Semantic Feature Analysis",
+        "url": "http://www.fl-pda.org/independent/courses/TSWD/content/unit04/docs/Semantic_Feature_Analysis.pdf",
+        "tags": "etpswd,unit5,resource",
+        "isExternal": true
+    },
+    {
+        "linkId": "195",
+        "title": "Vocabulary Lesson Template and Vocabulary List",
+        "url": "https://fl-pda.org/independent/courses/EPTSWD/docs/VocabularyLessonTemplate.pdf",
+        "tags": "etpswd,unit5,resource",
+        "isExternal": true
+    },
+    {
+        "linkId": "369",
+        "title": "An Introduction to Classwide Peer Tutoring",
+        "url": "http://www.specialconnections.ku.edu/ ?q=instruction/classwide_peer_tutoring",
+        "tags": "tswd,tswd-unit4",
         "isExternal": true
     }
 ]
