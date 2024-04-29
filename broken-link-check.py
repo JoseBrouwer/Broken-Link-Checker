@@ -53,12 +53,29 @@ try:
 
             # Check if the domain is from the ASCD site
             if 'ascd.org' in domain:
-                # Make the initial request
-                response = requests.get(link['url'], allow_redirects=True, timeout=10)
-                # Wait for 5 seconds before checking the status code
-                time.sleep(5)
-                # Refresh the response after 5 seconds to get the latest status
-                response = requests.get(link['url'], allow_redirects=True, timeout=10)
+                with requests.Session() as session:
+                    session.max_redirects = 10  # Safeguard against infinite redirects
+                    response = session.get(link['url'], allow_redirects=False, timeout=10)
+
+                    # Check if initial response is a 404
+                    if response.status_code == 404:
+                        print(f"Initial 404 detected at {link['url']}")
+
+                        # Manually handle redirects if 404 is detected initially
+                        while response.status_code in [301, 302, 303, 307, 308]:
+                            redirect_url = response.headers["Location"]
+                            print(f"Redirecting to {redirect_url}")
+                            response = session.get(
+                                redirect_url, allow_redirects=False, timeout=10
+                            )
+
+                        # Final URL status check
+                        if response.status_code == 200:
+                            print(f"Successfully redirected to {response.url} with status 200")
+                        else:
+                            print(f"Ended with status {response.status_code} at {response.url}")
+                    else:
+                        print(f"Initial status code {response.status_code} at {link['url']}")
             else:
                 # For other domains, proceed as usual
                 response = requests.get(link['url'], allow_redirects=True, timeout=10)
