@@ -4,62 +4,71 @@
         "title": "International Literacy Association",
         "url": "http://www.reading.org/",
         "tags": "etpswd,unit2,resource",
-        "isExternal": true
+        "isExternal": true,
+        "Error": "HTTPConnectionPool(host='www.reading.org', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x000001D17105EE10>, 'Connection to www.reading.org timed out. (connect timeout=10)'))"
     },
     {
         "linkId": "107",
         "title": "Marzano Art and Science of Teaching Framework Learning Map",
         "url": "https://www.k12.wa.us/sites/default/files/public/tpep/frameworks/marzano/marzano_learning_map.pdf",
         "tags": "etpswd,unit3,resource",
-        "isExternal": true
+        "isExternal": true,
+        "Error": "404 Status Code"
     },
     {
         "linkId": "151",
         "title": "Social Studies and Personalized learning: Emerging Promising Practices From the Field",
         "url": "http://www.centeril.org/2016Handbook/resources/Woyshner_chapter_web.pdf",
         "tags": "etpswd,unit5,resource",
-        "isExternal": true
+        "isExternal": true,
+        "Error": "404 Status Code"
     },
     {
         "linkId": "175",
         "title": "Florida's Exceptional Student Education Personal Development Portal",
         "url": "http://pdportal.florida-ese.org/",
         "tags": "etpswd,unit5,resource",
-        "isExternal": true
+        "isExternal": true,
+        "Error": "HTTPConnectionPool(host='pdportal.florida-ese.org', port=80): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D171034090>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))"
     },
     {
         "linkId": "177",
         "title": "Think-Alouds",
         "url": "https://www.readingrockets.org/content/pdfs/thinkaloud_checklist.pdf",
         "tags": "etpswd,unit5,resource",
-        "isExternal": true
+        "isExternal": true,
+        "Error": "404 Status Code"
     },
     {
         "linkId": "184",
         "title": "Class-wide Peer Tutoring",
         "url": "https://dev.fl-pda.org/independent/courses/EPTSWD/docs/ClasswidePeerTutoring.pdf",
         "tags": "etpswd,unit5,resource",
-        "isExternal": true
+        "isExternal": true,
+        "Error": "('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))"
     },
     {
         "linkId": "193",
         "title": "Semantic Feature Analysis",
         "url": "http://www.fl-pda.org/independent/courses/TSWD/content/unit04/docs/Semantic_Feature_Analysis.pdf",
         "tags": "etpswd,unit5,resource",
-        "isExternal": true
+        "isExternal": true,
+        "Error": "404 Status Code"
     },
     {
         "linkId": "195",
         "title": "Vocabulary Lesson Template and Vocabulary List",
         "url": "https://fl-pda.org/independent/courses/EPTSWD/docs/VocabularyLessonTemplate.pdf",
         "tags": "etpswd,unit5,resource",
-        "isExternal": true
+        "isExternal": true,
+        "Error": "404 Status Code"
     },
     {
         "linkId": "369",
         "title": "An Introduction to Classwide Peer Tutoring",
         "url": "http://www.specialconnections.ku.edu/ ?q=instruction/classwide_peer_tutoring",
         "tags": "tswd,tswd-unit4",
-        "isExternal": true
+        "isExternal": true,
+        "Error": "404 Status Code"
     }
 ]

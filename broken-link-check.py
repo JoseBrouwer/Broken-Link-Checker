@@ -70,27 +70,31 @@ try:
 
                         # Final URL status check
                         if response.status_code == 200:
-                            print(f"Successfully redirected to {response.url} with status 200")
+                            print(f"Successfully redirected to {response.url} with status 200\n")
                         else:
-                            print(f"Ended with status {response.status_code} at {response.url}")
+                            print(f"Ended with status {response.status_code} at {response.url}\n")
                     else:
-                        print(f"Initial status code {response.status_code} at {link['url']}")
+                        print(f"Initial status code {response.status_code} at {link['url']}\n")
             else:
                 # For other domains, proceed as usual
                 response = requests.get(link['url'], allow_redirects=True, timeout=10)
 
             if response.status_code == 404:
                 # If 404, add to the broken_links list
-                print(f"Broken link: {link['url']}")
+                print(f"Broken link: {link['url']}\n")
+                link['Error'] = '404 Status Code'
                 broken_links.append(link)
         except requests.ConnectionError as e:
-            print(f"Connection error while checking URL {link['url']}. Treating as 404. ERROR: {e}")
+            print(f"Connection error while checking URL {link['url']}. Treating as 404. ERROR: {e}\n")
+            link['Error'] = str(e)
             broken_links.append(link)
         except requests.Timeout as e:
-            print(f"Timeout for URL {link['url']}. Treating as 404. ERROR: {e}")
+            print(f"Timeout for URL {link['url']}. Treating as 404. ERROR: {e}\n")
+            link['Error'] = str(e)
             broken_links.append(link)
         except requests.RequestException as e:
-            print(f"Error while checking URL {link['url']}: {e}")
+            print(f"Error while checking URL {link['url']}: {e}\n")
+            link['Error'] = str(e)
 
     # Print or save the broken links as needed
     with open('broken_links.json', 'w') as f:
