@@ -1,0 +1,1769 @@
+{
+    "links": [
+        {
+            "linkId": "0",
+            "url": "http://www.fl-pda.org/independent/courses/TSWD/content/resources/SB-1108-TAP.pdf",
+            "page": "over-02.html"
+        },
+        {
+            "linkId": "1",
+            "url": "http://www.fl-pda.org/coordinators/",
+            "page": "over-02.html"
+        },
+        {
+            "linkId": "2",
+            "url": "http://www.fl-pda.org/",
+            "page": "over-02.html"
+        },
+        {
+            "linkId": "3",
+            "url": "https://www.google.com/chrome/browser/",
+            "page": "over-03.html"
+        },
+        {
+            "linkId": "4",
+            "url": "https://www.mozilla.org/en-US/firefox/new/",
+            "page": "over-03.html"
+        },
+        {
+            "linkId": "5",
+            "url": "http://support.apple.com/downloads/#internet",
+            "page": "over-03.html"
+        },
+        {
+            "linkId": "6",
+            "url": "http://windows.microsoft.com/en-us/internet-explorer/download-ie",
+            "page": "over-03.html"
+        },
+        {
+            "linkId": "7",
+            "url": "http://get.adobe.com/reader/",
+            "page": "over-03.html"
+        },
+        {
+            "linkId": "8",
+            "url": "http://office.microsoft.com/en-us/word/",
+            "page": "over-03.html"
+        },
+        {
+            "linkId": "9",
+            "url": "http://floridarti.usf.edu/",
+            "page": "ref-01.html"
+        },
+        {
+            "linkId": "10",
+            "url": "http://www.cpalms.org",
+            "page": "ref-01.html"
+        },
+        {
+            "linkId": "11",
+            "url": "http://www.floridarti.usf.edu/resources/format/pdf/specially_designed_instruction_mtss.pdf",
+            "page": "ref-01.html"
+        },
+        {
+            "linkId": "12",
+            "url": "http://info.fldoe.org/docushare/dsweb/Get/Document-7122/dps-2014-94.pdf",
+            "page": "ref-01.html"
+        },
+        {
+            "linkId": "13",
+            "url": "http://www.fdlrs.org/",
+            "page": "ref-01.html"
+        },
+        {
+            "linkId": "14",
+            "url": "http://www.fl-pda.org",
+            "page": "ref-01.html"
+        },
+        {
+            "linkId": "15",
+            "url": "https://www.tlc-mtss.com/",
+            "page": "ref-01.html"
+        },
+        {
+            "linkId": "16",
+            "url": "http://differentiationcentral.com/",
+            "page": "ref-01.html"
+        },
+        {
+            "linkId": "17",
+            "url": "http://www.udlcenter.org/",
+            "page": "ref-01.html"
+        },
+        {
+            "linkId": "18",
+            "url": "http://udltheorypractice.cast.org/login",
+            "page": "ref-01.html"
+        },
+        {
+            "linkId": "19",
+            "url": "http://www.cast.org/",
+            "page": "ref-01.html"
+        },
+        {
+            "linkId": "20",
+            "url": "http://aem.cast.org/",
+            "page": "ref-01.html"
+        },
+        {
+            "linkId": "21",
+            "url": "http://sim.kucrl.org/#2",
+            "page": "ref-01.html"
+        },
+        {
+            "linkId": "22",
+            "url": "https://www.youtube.com/watch?v=bApuBiitL8Q&list=PLOXUrDMSVPHnDeKVZTOfi2pjWMegTcRCD&index=3",
+            "page": "ref-02.html"
+        },
+        {
+            "linkId": "23",
+            "url": "http://www.youtube.com/watch?v=bDvKnY0g6e4",
+            "page": "ref-02.html"
+        },
+        {
+            "linkId": "24",
+            "url": "https://www.youtube.com/watch?v=s-EsS6Cbkj4",
+            "page": "ref-02.html"
+        },
+        {
+            "linkId": "25",
+            "url": "https://www.youtube.com/watch?v=nTwhcroMAaU",
+            "page": "ref-02.html"
+        },
+        {
+            "linkId": "26",
+            "url": "https://www.youtube.com/watch?v=ofOJqdDbUd8",
+            "page": "ref-02.html"
+        },
+        {
+            "linkId": "27",
+            "url": "https://www.youtube.com/watch?v=pN34FNbOKXc",
+            "page": "ref-02.html"
+        },
+        {
+            "linkId": "28",
+            "url": "http://www.ted.com/talks/rita_pierson_every_kid_needs_a_champion?language=en",
+            "page": "ref-02.html"
+        },
+        {
+            "linkId": "29",
+            "url": "https://www.youtube.com/watch?v=APyvwPzxZ7I",
+            "page": "ref-02.html"
+        },
+        {
+            "linkId": "30",
+            "url": "https://www.youtube.com/watch?v=cjURdvzty4c",
+            "page": "ref-02.html"
+        },
+        {
+            "linkId": "31",
+            "url": "https://www.youtube.com/watch?v=gleNo8dqHb8",
+            "page": "ref-02.html"
+        },
+        {
+            "linkId": "32",
+            "url": "http://www.coedu.usf.edu/main/departments/sped/mathvids/strategies/completelist.html",
+            "page": "ref-02.html"
+        },
+        {
+            "linkId": "33",
+            "url": "http://www.npr.org/blogs/health/2012/09/18/161159263/teachers-expectations-can-influence-how-students-perform",
+            "page": "ref-02.html"
+        },
+        {
+            "linkId": "34",
+            "url": "http://www.ascd.org/publications/educational-leadership/sept08/vol66/num01/Assuming-the-Best.aspx",
+            "page": "ref-03.html"
+        },
+        {
+            "linkId": "35",
+            "url": "http://www.ascd.org/publications/educational-leadership/sept13/vol71/num01/Growing-Capable-Kids.aspx",
+            "page": "ref-03.html"
+        },
+        {
+            "linkId": "36",
+            "url": "http://www.ascd.org/publications/educational-leadership/oct12/vol70/num02/First,-Discover-Their-Strengths.aspx",
+            "page": "ref-03.html"
+        },
+        {
+            "linkId": "37",
+            "url": "http://www.ascd.org/publications/educational-leadership/oct03/vol61/num02/Deciding-to-Teach-Them-All.aspx",
+            "page": "ref-03.html"
+        },
+        {
+            "linkId": "38",
+            "url": "http://www.ascd.org/publications/educational-leadership/feb12/vol69/num05/Teach-Up-for-Excellence.aspx",
+            "page": "ref-03.html"
+        },
+        {
+            "linkId": "39",
+            "url": "http://blogs.scientificamerican.com/literally-psyched/2012/04/03/intelligence-and-other-stereotypes-the-power-of-mindset/",
+            "page": "ref-03.html"
+        },
+        {
+            "linkId": "40",
+            "url": "http://www.edutopia.org/multiple-intelligences-research",
+            "page": "ref-03.html"
+        },
+        {
+            "linkId": "41",
+            "url": "http://www.aft.org/sites/default/files/periodicals/Rosenshine.pdf",
+            "page": "ref-03.html"
+        },
+        {
+            "linkId": "42",
+            "url": "http://www.educatorstechnology.com/2013/02/the-22-digital-skills-every-21st.html",
+            "page": "ref-03.html"
+        },
+        {
+            "linkId": "43",
+            "url": "http://www.edutopia.org/blog/differentiated-instruction-learner-interest-matters-john-mccarthy",
+            "page": "ref-03.html"
+        },
+        {
+            "linkId": "44",
+            "url": "http://teacher.scholastic.com/products/authors/pdfs/Narrowing_the_Gap.pdf",
+            "page": "ref-03.html"
+        },
+        {
+            "linkId": "45",
+            "url": "http://www.centerii.org/search/Resources%5CFiveDirectInstruct.pdf",
+            "page": "ref-03.html"
+        },
+        {
+            "linkId": "46",
+            "url": "http://explicitinstruction.org/download/sample-chapter.pdf",
+            "page": "ref-03.html"
+        },
+        {
+            "linkId": "47",
+            "url": "http://www.centeroninstruction.org/files/Using%20Instructional%20Routines%20to%20Differentiate%20Instruction.pdf",
+            "page": "ref-03.html"
+        },
+        {
+            "linkId": "48",
+            "url": "http://projectlearnet.org/tutorials/instructional_routines.html",
+            "page": "ref-03.html"
+        },
+        {
+            "linkId": "49",
+            "url": "http://www.fcrr.org/assessment/ET",
+            "page": "ref-03.html"
+        },
+        {
+            "linkId": "50",
+            "url": "https://www.interventioncentral.org/academic-interventions/general-academic/introducing-academic-strategies-students-direct-instruction-",
+            "page": "ref-03.html"
+        },
+        {
+            "linkId": "51",
+            "url": "http://s3.amazonaws.com/cmi-teaching-ld/alerts/11/uploaded_files/original_PeerTutoring_rev1.pdf?1301001297",
+            "page": "ref-03.html"
+        },
+        {
+            "linkId": "52",
+            "url": "http://www.ascd.org/publications/educational-leadership/mar97/vol54/num06/Why-Reciprocal-Teaching%C2%A2.aspx",
+            "page": "ref-03.html"
+        },
+        {
+            "linkId": "53",
+            "url": "http://www.readingquest.org/strat/rt.html",
+            "page": "ref-03.html"
+        },
+        {
+            "linkId": "54",
+            "url": "https://eric.ed.gov/?q=Assisting+Students+Struggling+with+Reading%3a+Response+to+Intervention+and+Multi-Tier+Intervention+in+the+Primary+Grades%E2%80%94IES+Practice+Guide&id=ED504264",
+            "page": "ref-03.html"
+        },
+        {
+            "linkId": "55",
+            "url": "http://www.centeroninstruction.org/files/Intensive%20Interventions%20for%20Students%20Struggling%20in%20Reading%20%26%20Math.pdf",
+            "page": "ref-03.html"
+        },
+        {
+            "linkId": "56",
+            "url": "https://www.carnegie.org/media/filer_public/3c/f5/3cf58727-34f4-4140-a014-723a00ac56f7/ccny_report_2007_writing.pdf",
+            "page": "ref-03.html"
+        },
+        {
+            "linkId": "57",
+            "url": "http://ies.ed.gov/ncee/wwc/pdf/practice_guides/adlit_pg_082608.pdf",
+            "page": "ref-03.html"
+        },
+        {
+            "linkId": "58",
+            "url": "https://eric.ed.gov/?q=Assisting+Students+Struggling+with+Mathematics%3a+Response+to+Intervention+(RtI)+for+Elementary+and+Middle+Schools&id=ED504995",
+            "page": "ref-03.html"
+        },
+        {
+            "linkId": "59",
+            "url": "http://www.coedu.usf.edu/main/departments/sped/mathvids/plans/plans.html",
+            "page": "ref-03.html"
+        },
+        {
+            "linkId": "60",
+            "url": "http://www.washington.edu/doit/making-math-science-and-technology-instruction-accessible-students-disabilities",
+            "page": "ref-03.html"
+        },
+        {
+            "linkId": "61",
+            "url": "http://www.nctm.org/uploadedFiles/Research_and_Advocacy/research_brief_and_clips/Student_with_Difficulties_Clip.pdf",
+            "page": "ref-03.html"
+        },
+        {
+            "linkId": "62",
+            "url": "http://cosmos.bgsu.edu/research/duran.pdf",
+            "page": "ref-03.html"
+        },
+        {
+            "linkId": "63",
+            "url": "http://www.socialstudies.org/system/files/publications/yl/1703/170308.pdf",
+            "page": "ref-03.html"
+        },
+        {
+            "linkId": "64",
+            "url": "http://www.nsta.org/disabilities/",
+            "page": "ref-03.html"
+        },
+        {
+            "linkId": "65",
+            "url": "http://www.ascd.org/publications/educational-leadership/oct14/vol72/num02/%C2%A3The-Boss-of-My-Brain%C2%A3.aspx",
+            "page": "ref-03.html"
+        },
+        {
+            "linkId": "66",
+            "url": "docs/ETPSwDReferences.pdf",
+            "page": "ref-04.html"
+        },
+        {
+            "linkId": "67",
+            "url": "http://bit.ly/SLd3BU",
+            "page": "ref-04.html"
+        },
+        {
+            "linkId": "68",
+            "url": "http://www.assessmentforlearning.edu.au\\default.asp",
+            "page": "ref-04.html"
+        },
+        {
+            "linkId": "69",
+            "url": "http://www.fldoe.org/core/fileparse.php/7690/urlt/0070122-qualityieps.pdf",
+            "page": "ref-04.html"
+        },
+        {
+            "linkId": "70",
+            "url": "http://www.fldoe.org/teaching/just-for-teachers-community/growth-mindset/",
+            "page": "ref-04.html"
+        },
+        {
+            "linkId": "71",
+            "url": "http://ies.ed.gov/ncee/wwc/Publications_Reviews.aspx?f=All%20Publication%20and%20Product%20Types,3;#pubsearch",
+            "page": "ref-04.html"
+        },
+        {
+            "linkId": "72",
+            "url": "http://aem.cast.org/about/publications/2003/ncac-differentiated-instruction-udl.html#.VzzGTJErJ48",
+            "page": "ref-04.html"
+        },
+        {
+            "linkId": "73",
+            "url": "http://aem.cast.org/about/publications/2002/ncac-explicit-instruction.html#.VzzDPZErJ48",
+            "page": "ref-04.html"
+        },
+        {
+            "linkId": "74",
+            "url": "http://www.edweek.org/tm/articles/2014/06/18/gp_rose_interview.html",
+            "page": "ref-04.html"
+        },
+        {
+            "linkId": "75",
+            "url": "http://caroltomlinson.com/Presentations/NAGC_Nov13.pdf",
+            "page": "ref-04.html"
+        },
+        {
+            "linkId": "76",
+            "url": "docs/U5-EstablishYourLearningGoals.pdf",
+            "page": "ref-05.html"
+        },
+        {
+            "linkId": "77",
+            "url": "http://www.bscs.org/bscs-5e-instructional-model",
+            "page": "ref-05.html"
+        },
+        {
+            "linkId": "78",
+            "url": "http://www.readwritethink.org/classroom-resources/lesson-plans/building-reading-comprehension-through-139.html",
+            "page": "ref-05.html"
+        },
+        {
+            "linkId": "79",
+            "url": "http://www.ku-crl.org",
+            "page": "ref-05.html"
+        },
+        {
+            "linkId": "80",
+            "url": "http://www.fdlrs.org/",
+            "page": "ref-05.html"
+        },
+        {
+            "linkId": "81",
+            "url": "http://www.readwritethink.org/classroom-resources/lesson-plans/guided-comprehension-knowing-words-240.html",
+            "page": "ref-05.html"
+        },
+        {
+            "linkId": "82",
+            "url": "http://www.fcrr.org/assessment/ET/routines/routines.html",
+            "page": "ref-05.html"
+        },
+        {
+            "linkId": "83",
+            "url": "http://www.coedu.usf.edu/main/departments/sped/mathvids/strategies/completelist.html",
+            "page": "ref-05.html"
+        },
+        {
+            "linkId": "84",
+            "url": "http://www.washington.edu/doit/making-math-science-and-technology-instruction-accessible-students-disabilities",
+            "page": "ref-05.html"
+        },
+        {
+            "linkId": "85",
+            "url": "http://www.coedu.usf.edu/main/departments/sped/mathvids/plans/plans.html",
+            "page": "ref-05.html"
+        },
+        {
+            "linkId": "86",
+            "url": "http://www.nsta.org/disabilities/",
+            "page": "ref-05.html"
+        },
+        {
+            "linkId": "87",
+            "url": "http://www.readingquest.org/strat/rt.html",
+            "page": "ref-05.html"
+        },
+        {
+            "linkId": "88",
+            "url": "http://iris.peabody.vanderbilt.edu/module/srs/",
+            "page": "ref-05.html"
+        },
+        {
+            "linkId": "89",
+            "url": "http://cehs.unl.edu/secd/teaching-strategies/",
+            "page": "ref-05.html"
+        },
+        {
+            "linkId": "90",
+            "url": "http://www.readingrockets.org/strategies/think_alouds",
+            "page": "ref-05.html"
+        },
+        {
+            "linkId": "91",
+            "url": "http://projectlearnet.org/tutorials/instructional_routines.html",
+            "page": "ref-05.html"
+        },
+        {
+            "linkId": "92",
+            "url": "https://www.visualthesaurus.com/cm/booknook/using-semantic-maps-to-develop-word-meaning/",
+            "page": "ref-05.html"
+        },
+        {
+            "linkId": "93",
+            "url": "http://www.ascd.org/publications/educational-leadership/mar97/vol54/num06/Why-Reciprocal-Teaching%C2%A2.aspx",
+            "page": "ref-05.html"
+        },
+        {
+            "linkId": "94",
+            "url": "https://www.youtube.com/watch?v=cjURdvzty4c",
+            "page": "ref-05.html"
+        },
+        {
+            "linkId": "95",
+            "url": "https://www.youtube.com/watch?v=gleNo8dqHb8",
+            "page": "ref-05.html"
+        },
+        {
+            "linkId": "96",
+            "url": "https://www.youtube.com/watch?v=s-EsS6Cbkj4",
+            "page": "ref-05.html"
+        },
+        {
+            "linkId": "97",
+            "url": "https://www.youtube.com/watch?v=nTwhcroMAaU",
+            "page": "ref-05.html"
+        },
+        {
+            "linkId": "98",
+            "url": "https://www.youtube.com/watch?v=ofOJqdDbUd8",
+            "page": "ref-05.html"
+        },
+        {
+            "linkId": "99",
+            "url": "https://www.youtube.com/watch?v=APyvwPzxZ7I",
+            "page": "ref-05.html"
+        },
+        {
+            "linkId": "100",
+            "url": "docs/U1-EstablishYourLearningGoals.pdf",
+            "page": "u01-02.html"
+        },
+        {
+            "linkId": "101",
+            "url": "http://floridarti.usf.edu/",
+            "page": "u01-03.html"
+        },
+        {
+            "linkId": "102",
+            "url": "http://sss.usf.edu/integrated/fissm/Tools/IntegratedSS_Final_1.pdf",
+            "page": "u01-03.html"
+        },
+        {
+            "linkId": "103",
+            "url": "https://floridarti.usf.edu/resources/format/pdf/specially_designed_instruction_mtss.pdf",
+            "page": "u01-03.html"
+        },
+        {
+            "linkId": "104",
+            "url": "http://edglossary.org/student-engagement/",
+            "page": "u01-09.html"
+        },
+        {
+            "linkId": "105",
+            "url": "http://www.youtube.com/watch?v=bDvKnY0g6e4",
+            "page": "u01-14.html"
+        },
+        {
+            "linkId": "106",
+            "url": "https://www.youtube.com/watch?v=bApuBiitL8Q&list=PLOXUrDMSVPHnDeKVZTOfi2pjWMegTcRCD&index=3",
+            "page": "u01-14.html"
+        },
+        {
+            "linkId": "107",
+            "url": "https://www.youtube.com/watch?v=APyvwPzxZ7I",
+            "page": "u01-14.html"
+        },
+        {
+            "linkId": "108",
+            "url": "https://floridarti.usf.edu/resources/format/pdf/specially_designed_instruction_mtss.pdf",
+            "page": "u01-14.html"
+        },
+        {
+            "linkId": "109",
+            "url": "http://info.fldoe.org/docushare/dsweb/Get/Document-7122/dps-2014-94.pdf",
+            "page": "u01-14.html"
+        },
+        {
+            "linkId": "110",
+            "url": "http://explicitinstruction.org/download/sample-chapter.pdf",
+            "page": "u01-14.html"
+        },
+        {
+            "linkId": "111",
+            "url": "http://floridarti.usf.edu/",
+            "page": "u01-14.html"
+        },
+        {
+            "linkId": "112",
+            "url": "http://differentiationcentral.com/",
+            "page": "u01-14.html"
+        },
+        {
+            "linkId": "113",
+            "url": "http://www.cast.org/our-work/about-udl.html#.VTaO0dJVikp",
+            "page": "u01-14.html"
+        },
+        {
+            "linkId": "114",
+            "url": "http://www.cast.org/our-work/about-udl.html#.XJ5rqZhKg2w",
+            "page": "u01-14.html"
+        },
+        {
+            "linkId": "115",
+            "url": "http://udlexchange.cast.org/home",
+            "page": "u01-14.html"
+        },
+        {
+            "linkId": "116",
+            "url": "https://www.marzanocenter.com/wp-content/uploads/sites/4/2019/04/FTEM_Updated_Michigan_08312017.pdf",
+            "page": "u01-14.html"
+        },
+        {
+            "linkId": "117",
+            "url": "https://danielsongroup.org/framework/",
+            "page": "u01-14.html"
+        },
+        {
+            "linkId": "118",
+            "url": "https://florida-ese.org/",
+            "page": "u01-14.html"
+        },
+        {
+            "linkId": "119",
+            "url": "docs/U2-EstablishYourLearningGoals.pdf",
+            "page": "u02-02.html"
+        },
+        {
+            "linkId": "120",
+            "url": "http://www.ascd.org/publications/educational-leadership/oct03/vol61/num02/Deciding-to-Teach-Them-All.aspx",
+            "page": "u02-04.html"
+        },
+        {
+            "linkId": "121",
+            "url": "https://www.researchgate.net/publication/287042699_First_Discover_Their_Strengths",
+            "page": "u02-04.html"
+        },
+        {
+            "linkId": "122",
+            "url": "http://www.npr.org/blogs/health/2012/09/18/161159263/teachers-expectations-can-influence-how-students-perform",
+            "page": "u02-04.html"
+        },
+        {
+            "linkId": "123",
+            "url": "http://www.ted.com/talks/rita_pierson_every_kid_needs_a_champion?language=en",
+            "page": "u02-06.html"
+        },
+        {
+            "linkId": "124",
+            "url": "http://www.ascd.org/publications/educational-leadership/sept08/vol66/num01/Assuming-the-Best.aspx",
+            "page": "u02-08.html"
+        },
+        {
+            "linkId": "125",
+            "url": "http://blogs.scientificamerican.com/literally-psyched/2012/04/03/intelligence-and-other-stereotypes-the-power-of-mindset/",
+            "page": "u02-11.html"
+        },
+        {
+            "linkId": "126",
+            "url": "https://www.youtube.com/watch?v=pN34FNbOKXc",
+            "page": "u02-11.html"
+        },
+        {
+            "linkId": "127",
+            "url": "http://www.mindsetworks.com/free-resources/",
+            "page": "u02-12.html"
+        },
+        {
+            "linkId": "128",
+            "url": "http://www.ascd.org/publications/educational-leadership/sept13/vol71/num01/Growing-Capable-Kids.aspx",
+            "page": "u02-14.html"
+        },
+        {
+            "linkId": "129",
+            "url": "javascript:void(0);",
+            "page": "u02-26.html"
+        },
+        {
+            "linkId": "130",
+            "url": "javascript:void(0);",
+            "page": "u02-26.html"
+        },
+        {
+            "linkId": "131",
+            "url": "javascript:void(0);",
+            "page": "u02-26.html"
+        },
+        {
+            "linkId": "132",
+            "url": "javascript:void(0);",
+            "page": "u02-26.html"
+        },
+        {
+            "linkId": "133",
+            "url": "javascript:void(0);",
+            "page": "u02-26.html"
+        },
+        {
+            "linkId": "134",
+            "url": "javascript:void(0);",
+            "page": "u02-26.html"
+        },
+        {
+            "linkId": "135",
+            "url": "javascript:void(0);",
+            "page": "u02-26.html"
+        },
+        {
+            "linkId": "136",
+            "url": "javascript:void(0);",
+            "page": "u02-26.html"
+        },
+        {
+            "linkId": "137",
+            "url": "javascript:void(0);",
+            "page": "u02-26.html"
+        },
+        {
+            "linkId": "138",
+            "url": "http://udltheorypractice.cast.org/login",
+            "page": "u02-27.html"
+        },
+        {
+            "linkId": "139",
+            "url": "https://www.marinschools.org/cms/lib/CA01001323/Centricity/Domain/1250/Boss%20of%20my%20Brain.pdf",
+            "page": "u02-27.html"
+        },
+        {
+            "linkId": "140",
+            "url": "docs/U2P27-ExpertLearners-PositiveTeacherActions.pdf",
+            "page": "u02-27.html"
+        },
+        {
+            "linkId": "141",
+            "url": "javascript:gradeElementary();",
+            "page": "u02-29.html"
+        },
+        {
+            "linkId": "142",
+            "url": "javascript:gradeSecondary();",
+            "page": "u02-29.html"
+        },
+        {
+            "linkId": "143",
+            "url": "javascript:gradeElementary();",
+            "page": "u02-30.html"
+        },
+        {
+            "linkId": "144",
+            "url": "javascript:gradeSecondary();",
+            "page": "u02-30.html"
+        },
+        {
+            "linkId": "145",
+            "url": "docs/U2P30-ExpertLearners-PositiveTeacherActions-MrsDavis.pdf",
+            "page": "u02-30.html"
+        },
+        {
+            "linkId": "146",
+            "url": "docs/U2P30-ExpertLearners-PositiveTeacherActions-MrsBarnhill.pdf",
+            "page": "u02-30.html"
+        },
+        {
+            "linkId": "147",
+            "url": "docs/U3-EstablishYourLearningGoals.pdf",
+            "page": "u03-02.html"
+        },
+        {
+            "linkId": "148",
+            "url": "http://www.cpalms.org",
+            "page": "u03-04.html"
+        },
+        {
+            "linkId": "149",
+            "url": "http://www.edutopia.org/blog/5-fast-formative-assessment-tools-vicki-davis",
+            "page": "u03-08.html"
+        },
+        {
+            "linkId": "150",
+            "url": "docs/U3P13-ExamplesofFormativeAssessment.pdf",
+            "page": "u03-13.html"
+        },
+        {
+            "linkId": "151",
+            "url": "javascript:void(0);",
+            "page": "u03-13.html"
+        },
+        {
+            "linkId": "152",
+            "url": "javascript:void(0);",
+            "page": "u03-13.html"
+        },
+        {
+            "linkId": "153",
+            "url": "javascript:void(0);",
+            "page": "u03-13.html"
+        },
+        {
+            "linkId": "154",
+            "url": "javascript:void(0);",
+            "page": "u03-13.html"
+        },
+        {
+            "linkId": "155",
+            "url": "javascript:void(0);",
+            "page": "u03-13.html"
+        },
+        {
+            "linkId": "156",
+            "url": "javascript:void(0);",
+            "page": "u03-13.html"
+        },
+        {
+            "linkId": "157",
+            "url": "javascript:void(0);",
+            "page": "u03-13.html"
+        },
+        {
+            "linkId": "158",
+            "url": "javascript:void(0);",
+            "page": "u03-13.html"
+        },
+        {
+            "linkId": "159",
+            "url": "javascript:void(0);",
+            "page": "u03-13.html"
+        },
+        {
+            "linkId": "160",
+            "url": "javascript:void(0);",
+            "page": "u03-13.html"
+        },
+        {
+            "linkId": "161",
+            "url": "javascript:void(0);",
+            "page": "u03-13.html"
+        },
+        {
+            "linkId": "162",
+            "url": "javascript:void(0);",
+            "page": "u03-13.html"
+        },
+        {
+            "linkId": "163",
+            "url": "javascript:void(0);",
+            "page": "u03-13.html"
+        },
+        {
+            "linkId": "164",
+            "url": "javascript:void(0);",
+            "page": "u03-13.html"
+        },
+        {
+            "linkId": "165",
+            "url": "javascript:void(0);",
+            "page": "u03-13.html"
+        },
+        {
+            "linkId": "166",
+            "url": "javascript:void(0);",
+            "page": "u03-13.html"
+        },
+        {
+            "linkId": "167",
+            "url": "javascript:void(0);",
+            "page": "u03-13.html"
+        },
+        {
+            "linkId": "168",
+            "url": "javascript:void(0);",
+            "page": "u03-13.html"
+        },
+        {
+            "linkId": "169",
+            "url": "javascript:void(0);",
+            "page": "u03-13.html"
+        },
+        {
+            "linkId": "170",
+            "url": "javascript:void(0);",
+            "page": "u03-13.html"
+        },
+        {
+            "linkId": "171",
+            "url": "javascript:void(0);",
+            "page": "u03-13.html"
+        },
+        {
+            "linkId": "172",
+            "url": "javascript:void(0);",
+            "page": "u03-13.html"
+        },
+        {
+            "linkId": "173",
+            "url": "javascript:void(0);",
+            "page": "u03-13.html"
+        },
+        {
+            "linkId": "174",
+            "url": "javascript:void(0);",
+            "page": "u03-13.html"
+        },
+        {
+            "linkId": "175",
+            "url": "javascript:void(0);",
+            "page": "u03-13.html"
+        },
+        {
+            "linkId": "176",
+            "url": "javascript:void(0);",
+            "page": "u03-13.html"
+        },
+        {
+            "linkId": "177",
+            "url": "javascript:void(0);",
+            "page": "u03-13.html"
+        },
+        {
+            "linkId": "178",
+            "url": "javascript:void(0);",
+            "page": "u03-13.html"
+        },
+        {
+            "linkId": "179",
+            "url": "javascript:void(0);",
+            "page": "u03-13.html"
+        },
+        {
+            "linkId": "180",
+            "url": "javascript:void(0);",
+            "page": "u03-13.html"
+        },
+        {
+            "linkId": "181",
+            "url": "javascript:void(0);",
+            "page": "u03-13.html"
+        },
+        {
+            "linkId": "182",
+            "url": "javascript:void(0);",
+            "page": "u03-13.html"
+        },
+        {
+            "linkId": "183",
+            "url": "http://www.kaganonline.com",
+            "page": "u03-13.html"
+        },
+        {
+            "linkId": "184",
+            "url": "http://www.polleverywhere.com/",
+            "page": "u03-13.html"
+        },
+        {
+            "linkId": "185",
+            "url": "http://www.cpalms.org/Public/search/Standard",
+            "page": "u03-15.html"
+        },
+        {
+            "linkId": "186",
+            "url": "http://www.cpalms.org/Public/search/AccessPoint",
+            "page": "u03-15.html"
+        },
+        {
+            "linkId": "187",
+            "url": "https://accesstofls.org/",
+            "page": "u03-15.html"
+        },
+        {
+            "linkId": "188",
+            "url": "javascript:gradeElementary();",
+            "page": "u03-17.html"
+        },
+        {
+            "linkId": "189",
+            "url": "javascript:gradeSecondary();",
+            "page": "u03-17.html"
+        },
+        {
+            "linkId": "190",
+            "url": "javascript:gradeElementary();",
+            "page": "u03-18.html"
+        },
+        {
+            "linkId": "191",
+            "url": "javascript:gradeSecondary();",
+            "page": "u03-18.html"
+        },
+        {
+            "linkId": "192",
+            "url": "javascript:gradeElementary();",
+            "page": "u03-19.html"
+        },
+        {
+            "linkId": "193",
+            "url": "javascript:gradeSecondary();",
+            "page": "u03-19.html"
+        },
+        {
+            "linkId": "194",
+            "url": "javascript:gradeElementary();",
+            "page": "u03-20.html"
+        },
+        {
+            "linkId": "195",
+            "url": "javascript:gradeSecondary();",
+            "page": "u03-20.html"
+        },
+        {
+            "linkId": "196",
+            "url": "javascript:gradeElementary();",
+            "page": "u03-21.html"
+        },
+        {
+            "linkId": "197",
+            "url": "javascript:gradeSecondary();",
+            "page": "u03-21.html"
+        },
+        {
+            "linkId": "198",
+            "url": "javascript:gradeElementary();",
+            "page": "u03-22.html"
+        },
+        {
+            "linkId": "199",
+            "url": "javascript:gradeSecondary();",
+            "page": "u03-22.html"
+        },
+        {
+            "linkId": "200",
+            "url": "javascript:gradeElementary();",
+            "page": "u03-23.html"
+        },
+        {
+            "linkId": "201",
+            "url": "javascript:gradeSecondary();",
+            "page": "u03-23.html"
+        },
+        {
+            "linkId": "202",
+            "url": "javascript:gradeElementary();",
+            "page": "u03-24.html"
+        },
+        {
+            "linkId": "203",
+            "url": "javascript:gradeSecondary();",
+            "page": "u03-24.html"
+        },
+        {
+            "linkId": "204",
+            "url": "javascript:gradeElementary();",
+            "page": "u03-25.html"
+        },
+        {
+            "linkId": "205",
+            "url": "javascript:gradeSecondary();",
+            "page": "u03-25.html"
+        },
+        {
+            "linkId": "206",
+            "url": "javascript:void(0);",
+            "page": "u03-27.html"
+        },
+        {
+            "linkId": "207",
+            "url": "javascript:void(0);",
+            "page": "u03-27.html"
+        },
+        {
+            "linkId": "208",
+            "url": "javascript:void(0);",
+            "page": "u03-28.html"
+        },
+        {
+            "linkId": "209",
+            "url": "javascript:void(0);",
+            "page": "u03-28.html"
+        },
+        {
+            "linkId": "210",
+            "url": "javascript:void(0);",
+            "page": "u03-29.html"
+        },
+        {
+            "linkId": "211",
+            "url": "javascript:void(0);",
+            "page": "u03-29.html"
+        },
+        {
+            "linkId": "212",
+            "url": "docs/U3P31-QuickChecks.pdf",
+            "page": "u03-31.html"
+        },
+        {
+            "linkId": "213",
+            "url": "javascript:void(0);",
+            "page": "u03-33.html"
+        },
+        {
+            "linkId": "214",
+            "url": "javascript:void(0);",
+            "page": "u03-33.html"
+        },
+        {
+            "linkId": "215",
+            "url": "docs/U4-EstablishYourLearningGoals.pdf",
+            "page": "u04-02.html"
+        },
+        {
+            "linkId": "216",
+            "url": "http://www.ascd.org/publications/educational-leadership/feb12/vol69/num05/Teach-Up-for-Excellence.aspx",
+            "page": "u04-03.html"
+        },
+        {
+            "linkId": "217",
+            "url": "http://www.educatorstechnology.com/2013/02/the-22-digital-skills-every-21st.html",
+            "page": "u04-05.html"
+        },
+        {
+            "linkId": "218",
+            "url": "https://www.tlc-mtss.com/resources",
+            "page": "u04-05.html"
+        },
+        {
+            "linkId": "219",
+            "url": "https://www.bookshare.org/cms/",
+            "page": "u04-05.html"
+        },
+        {
+            "linkId": "220",
+            "url": "https://learningally.org/Solutions-for-School/school-grants/Florida",
+            "page": "u04-05.html"
+        },
+        {
+            "linkId": "221",
+            "url": "http://www.fldoe.org/core/fileparse.php/7690/urlt/0070122-qualityieps.pdf",
+            "page": "u04-05b.html"
+        },
+        {
+            "linkId": "222",
+            "url": "http://info.fldoe.org/docushare/dsweb/Get/Document-6801/dps-2013-65.pdf",
+            "page": "u04-05b.html"
+        },
+        {
+            "linkId": "223",
+            "url": "http://www.edutopia.org/blog/differentiated-instruction-learner-interest-matters-john-mccarthy",
+            "page": "u04-08.html"
+        },
+        {
+            "linkId": "224",
+            "url": "http://www.teacherswithapps.com/21st-century-icebreakers-10-ways-to-get-to-know-your-students-with-technology/",
+            "page": "u04-08.html"
+        },
+        {
+            "linkId": "225",
+            "url": "http://www.edutopia.org/multiple-intelligences-research",
+            "page": "u04-09.html"
+        },
+        {
+            "linkId": "226",
+            "url": "javascript:gradeElementary();",
+            "page": "u04-14.html"
+        },
+        {
+            "linkId": "227",
+            "url": "javascript:gradeSecondary();",
+            "page": "u04-14.html"
+        },
+        {
+            "linkId": "228",
+            "url": "javascript:gradeElementary();",
+            "page": "u04-15.html"
+        },
+        {
+            "linkId": "229",
+            "url": "javascript:gradeSecondary();",
+            "page": "u04-15.html"
+        },
+        {
+            "linkId": "230",
+            "url": "javascript:void(0);",
+            "page": "u04-15.html"
+        },
+        {
+            "linkId": "231",
+            "url": "javascript:void(0);",
+            "page": "u04-15.html"
+        },
+        {
+            "linkId": "232",
+            "url": "javascript:void(0);",
+            "page": "u04-15.html"
+        },
+        {
+            "linkId": "233",
+            "url": "javascript:void(0);",
+            "page": "u04-15.html"
+        },
+        {
+            "linkId": "234",
+            "url": "javascript:void(0);",
+            "page": "u04-15.html"
+        },
+        {
+            "linkId": "235",
+            "url": "javascript:void(0);",
+            "page": "u04-15.html"
+        },
+        {
+            "linkId": "236",
+            "url": "javascript:gradeElementary();",
+            "page": "u04-16.html"
+        },
+        {
+            "linkId": "237",
+            "url": "javascript:gradeSecondary();",
+            "page": "u04-16.html"
+        },
+        {
+            "linkId": "238",
+            "url": "javascript:void(0);",
+            "page": "u04-16.html"
+        },
+        {
+            "linkId": "239",
+            "url": "javascript:void(0);",
+            "page": "u04-16.html"
+        },
+        {
+            "linkId": "240",
+            "url": "docs/U4P15-RespectfulWork-Groups.pdf",
+            "page": "u04-16.html"
+        },
+        {
+            "linkId": "241",
+            "url": "javascript:gradeElementary();",
+            "page": "u04-17.html"
+        },
+        {
+            "linkId": "242",
+            "url": "javascript:gradeSecondary();",
+            "page": "u04-17.html"
+        },
+        {
+            "linkId": "243",
+            "url": "javascript:void(0);",
+            "page": "u04-17.html"
+        },
+        {
+            "linkId": "244",
+            "url": "javascript:void(0);",
+            "page": "u04-17.html"
+        },
+        {
+            "linkId": "245",
+            "url": "javascript:void(0);",
+            "page": "u04-17.html"
+        },
+        {
+            "linkId": "246",
+            "url": "javascript:void(0);",
+            "page": "u04-17.html"
+        },
+        {
+            "linkId": "247",
+            "url": "javascript:void(0);",
+            "page": "u04-17.html"
+        },
+        {
+            "linkId": "248",
+            "url": "javascript:void(0);",
+            "page": "u04-17.html"
+        },
+        {
+            "linkId": "249",
+            "url": "javascript:void(0);",
+            "page": "u04-17.html"
+        },
+        {
+            "linkId": "250",
+            "url": "javascript:void(0);",
+            "page": "u04-17.html"
+        },
+        {
+            "linkId": "251",
+            "url": "javascript:void(0);",
+            "page": "u04-17.html"
+        },
+        {
+            "linkId": "252",
+            "url": "javascript:gradeElementary();",
+            "page": "u04-18.html"
+        },
+        {
+            "linkId": "253",
+            "url": "javascript:gradeSecondary();",
+            "page": "u04-18.html"
+        },
+        {
+            "linkId": "254",
+            "url": "javascript:gradeElementary();",
+            "page": "u04-19.html"
+        },
+        {
+            "linkId": "255",
+            "url": "javascript:gradeSecondary();",
+            "page": "u04-19.html"
+        },
+        {
+            "linkId": "256",
+            "url": "javascript:void(0);",
+            "page": "u04-19.html"
+        },
+        {
+            "linkId": "257",
+            "url": "javascript:void(0);",
+            "page": "u04-19.html"
+        },
+        {
+            "linkId": "258",
+            "url": "http://online.seterra.net/en/ex/8",
+            "page": "u04-19.html"
+        },
+        {
+            "linkId": "259",
+            "url": "javascript:void(0);",
+            "page": "u04-19.html"
+        },
+        {
+            "linkId": "260",
+            "url": "javascript:void(0);",
+            "page": "u04-19.html"
+        },
+        {
+            "linkId": "261",
+            "url": "docs/U5-EstablishYourLearningGoals.pdf",
+            "page": "u05-02.html"
+        },
+        {
+            "linkId": "262",
+            "url": "http://www.centerii.org/search/Resources%5CFiveDirectInstruct.pdf",
+            "page": "u05-04.html"
+        },
+        {
+            "linkId": "263",
+            "url": "https://www.interventioncentral.org/academic-interventions/general-academic/introducing-academic-strategies-students-direct-instruction-",
+            "page": "u05-04.html"
+        },
+        {
+            "linkId": "264",
+            "url": "http://explicitinstruction.org/download/sample-chapter.pdf",
+            "page": "u05-04.html"
+        },
+        {
+            "linkId": "265",
+            "url": "https://www.youtube.com/watch?v=APyvwPzxZ7I",
+            "page": "u05-04.html"
+        },
+        {
+            "linkId": "266",
+            "url": "https://files.eric.ed.gov/fulltext/ED500486.pdf",
+            "page": "u05-05.html"
+        },
+        {
+            "linkId": "267",
+            "url": "http://ies.ed.gov/ncee/wwc/PracticeGuide/2",
+            "page": "u05-05.html"
+        },
+        {
+            "linkId": "268",
+            "url": "http://www.nctm.org/uploadedFiles/Research_and_Advocacy/research_brief_and_clips/Student_with_Difficulties_Clip.pdf",
+            "page": "u05-05.html"
+        },
+        {
+            "linkId": "269",
+            "url": "http://ies.ed.gov/ncee/wwc/PracticeGuide/8",
+            "page": "u05-06.html"
+        },
+        {
+            "linkId": "270",
+            "url": "http://ies.ed.gov/ncee/wwc/PracticeGuide/3",
+            "page": "u05-06.html"
+        },
+        {
+            "linkId": "271",
+            "url": "https://www.carnegie.org/media/filer_public/3c/f5/3cf58727-34f4-4140-a014-723a00ac56f7/ccny_report_2007_writing.pdf",
+            "page": "u05-06.html"
+        },
+        {
+            "linkId": "272",
+            "url": "http://www.centeroninstruction.org/files/Intensive%20Interventions%20for%20Students%20Struggling%20in%20Reading%20%26%20Math.pdf",
+            "page": "u05-06.html"
+        },
+        {
+            "linkId": "273",
+            "url": "https://fcrr.org/sites/g/files/upcbnu2836/files/media/projects/empowering-teachers/routines/pdf/instRoutines_3CCSFET.pdf",
+            "page": "u05-13.html"
+        },
+        {
+            "linkId": "274",
+            "url": "https://explicitinstruction.org/download/sample-chapter.pdf",
+            "page": "u05-13.html"
+        },
+        {
+            "linkId": "275",
+            "url": "http://cehs.unl.edu/secd/teaching-strategies/",
+            "page": "u05-13.html"
+        },
+        {
+            "linkId": "276",
+            "url": "http://iris.peabody.vanderbilt.edu/module/srs/",
+            "page": "u05-13.html"
+        },
+        {
+            "linkId": "277",
+            "url": "http://www.fdlrs.org",
+            "page": "u05-13.html"
+        },
+        {
+            "linkId": "278",
+            "url": "http://sim.kucrl.org/",
+            "page": "u05-13.html"
+        },
+        {
+            "linkId": "279",
+            "url": "https://www.youtube.com/watch?v=cjURdvzty4c",
+            "page": "u05-15.html"
+        },
+        {
+            "linkId": "280",
+            "url": "http://www.aft.org/sites/default/files/periodicals/Rosenshine.pdf",
+            "page": "u05-15.html"
+        },
+        {
+            "linkId": "281",
+            "url": "https://fcrr.org/sites/g/files/upcbnu2836/files/media/projects/empowering-teachers/routines/routines.html",
+            "page": "u05-22.html"
+        },
+        {
+            "linkId": "282",
+            "url": "http://www.centeroninstruction.org/files/Using%20Instructional%20Routines%20to%20Differentiate%20Instruction.pdf",
+            "page": "u05-22.html"
+        },
+        {
+            "linkId": "283",
+            "url": "http://treasures.macmillanmh.com/assets/extras/0001/2063/InstructionalRoutine_CA_B.pdf",
+            "page": "u05-22.html"
+        },
+        {
+            "linkId": "284",
+            "url": "http://projectlearnet.org/tutorials/instructional_routines.html",
+            "page": "u05-22.html"
+        },
+        {
+            "linkId": "285",
+            "url": "https://www.nsta.org/behavioral-disorders",
+            "page": "u05-27.html"
+        },
+        {
+            "linkId": "286",
+            "url": "https://www.nsta.org/visual-impairments",
+            "page": "u05-27.html"
+        },
+        {
+            "linkId": "287",
+            "url": "https://www.nsta.org/deaf-and-hard-hearing-students",
+            "page": "u05-27.html"
+        },
+        {
+            "linkId": "288",
+            "url": "https://www.nsta.org/intellectual-disabilities",
+            "page": "u05-27.html"
+        },
+        {
+            "linkId": "289",
+            "url": "https://www.nsta.org/learning-disabilities",
+            "page": "u05-27.html"
+        },
+        {
+            "linkId": "290",
+            "url": "https://www.nsta.org/autism",
+            "page": "u05-27.html"
+        },
+        {
+            "linkId": "291",
+            "url": "https://www.nsta.org/topics/disabilities",
+            "page": "u05-27.html"
+        },
+        {
+            "linkId": "292",
+            "url": "https://www.nsta.org/communication-disorders",
+            "page": "u05-27.html"
+        },
+        {
+            "linkId": "293",
+            "url": "http://www.washington.edu/doit/making-math-science-and-technology-instruction-accessible-students-disabilities",
+            "page": "u05-27.html"
+        },
+        {
+            "linkId": "294",
+            "url": "http://www.nctm.org/uploadedFiles/Research_and_Advocacy/research_brief_and_clips/Student_with_Difficulties_Clip.pdf",
+            "page": "u05-27.html"
+        },
+        {
+            "linkId": "295",
+            "url": "http://www.socialstudies.org/system/files/publications/articles/yl_170308.pdf",
+            "page": "u05-27.html"
+        },
+        {
+            "linkId": "296",
+            "url": "https://www.youtube.com/watch?v=nTwhcroMAaU",
+            "page": "u05-28.html"
+        },
+        {
+            "linkId": "297",
+            "url": "https://www.youtube.com/watch?v=ofOJqdDbUd8",
+            "page": "u05-28.html"
+        },
+        {
+            "linkId": "298",
+            "url": "https://www.youtube.com/watch?v=s-EsS6Cbkj4",
+            "page": "u05-28.html"
+        },
+        {
+            "linkId": "299",
+            "url": "http://pdportal.florida-ese.org/",
+            "page": "u05-28.html"
+        },
+        {
+            "linkId": "300",
+            "url": "docs/MainIdea&Summarization.pdf",
+            "page": "u05-29.html"
+        },
+        {
+            "linkId": "301",
+            "url": "docs/MainIdea&Summarization.pdf",
+            "page": "u05-29.html"
+        },
+        {
+            "linkId": "302",
+            "url": "http://www.fcrr.org",
+            "page": "u05-29.html"
+        },
+        {
+            "linkId": "303",
+            "url": "http://www.readingrockets.org/strategies/think_alouds",
+            "page": "u05-29.html"
+        },
+        {
+            "linkId": "304",
+            "url": "http://www.readwritethink.org/classroom-resources/lesson-plans/building-reading-comprehension-through-139.html",
+            "page": "u05-29.html"
+        },
+        {
+            "linkId": "305",
+            "url": "docs/Summarization&ReciprocalTeaching.pdf",
+            "page": "u05-30.html"
+        },
+        {
+            "linkId": "306",
+            "url": "docs/Summarization&ReciprocalTeaching.pdf",
+            "page": "u05-30.html"
+        },
+        {
+            "linkId": "307",
+            "url": "https://www.youtube.com/watch?v=gleNo8dqHb8",
+            "page": "u05-30.html"
+        },
+        {
+            "linkId": "308",
+            "url": "http://www.ascd.org/publications/educational-leadership/mar97/vol54/num06/Why-Reciprocal-Teaching%C2%A2.aspx",
+            "page": "u05-30.html"
+        },
+        {
+            "linkId": "309",
+            "url": "http://www.ascd.org/publications/classroom-leadership/nov2001/Reciprocal-Teaching.aspx",
+            "page": "u05-30.html"
+        },
+        {
+            "linkId": "310",
+            "url": "https://www.interventioncentral.org/academic-interventions/reading-comprehension/reciprocal-teaching-reading-comprehension-package",
+            "page": "u05-30.html"
+        },
+        {
+            "linkId": "311",
+            "url": "docs/ClasswidePeerTutoring.pdf",
+            "page": "u05-30.html"
+        },
+        {
+            "linkId": "312",
+            "url": "http://s3.amazonaws.com/cmi-teaching-ld/alerts/11/uploaded_files/original_PeerTutoring_rev1.pdf?1301001297",
+            "page": "u05-30.html"
+        },
+        {
+            "linkId": "313",
+            "url": "http://www.ascd.org/ASCD/pdf/journals/ed_lead/el_199204_rosenshine.pdf",
+            "page": "u05-30.html"
+        },
+        {
+            "linkId": "314",
+            "url": "docs/ExplicitSmallGroupInstruction.pdf",
+            "page": "u05-31.html"
+        },
+        {
+            "linkId": "315",
+            "url": "docs/ExplicitSmallGroupInstruction.pdf",
+            "page": "u05-31.html"
+        },
+        {
+            "linkId": "316",
+            "url": "http://fcit.usf.edu/mathvids/videos/videos.html",
+            "page": "u05-31.html"
+        },
+        {
+            "linkId": "317",
+            "url": "http://fcit.usf.edu/mathvids/plans/plans.html",
+            "page": "u05-31.html"
+        },
+        {
+            "linkId": "318",
+            "url": "javascript:void(0);",
+            "page": "u05-32.html"
+        },
+        {
+            "linkId": "319",
+            "url": "javascript:void(0);",
+            "page": "u05-32.html"
+        },
+        {
+            "linkId": "320",
+            "url": "javascript:void(0);",
+            "page": "u05-32.html"
+        },
+        {
+            "linkId": "321",
+            "url": "javascript:void(0);",
+            "page": "u05-32.html"
+        },
+        {
+            "linkId": "322",
+            "url": "docs/VocabularyLessonTemplate.pdf",
+            "page": "u05-33.html"
+        },
+        {
+            "linkId": "323",
+            "url": "docs/VocabularyLessonTemplate.pdf",
+            "page": "u05-33.html"
+        },
+        {
+            "linkId": "324",
+            "url": "http://teacher.scholastic.com/products/authors/pdfs/Narrowing_the_Gap.pdf",
+            "page": "u05-33.html"
+        },
+        {
+            "linkId": "325",
+            "url": "http://www.corelearn.com/files/WordRootLesson.pdf",
+            "page": "u05-33.html"
+        },
+        {
+            "linkId": "326",
+            "url": "https://fcrr.org/node/2626",
+            "page": "u05-33.html"
+        },
+        {
+            "linkId": "327",
+            "url": "https://www.visualthesaurus.com/cm/booknook/using-semantic-maps-to-develop-word-meaning/",
+            "page": "u05-33.html"
+        },
+        {
+            "linkId": "328",
+            "url": "http://www.readwritethink.org/classroom-resources/lesson-plans/guided-comprehension-knowing-words-240.html",
+            "page": "u05-33.html"
+        },
+        {
+            "linkId": "329",
+            "url": "docs/VocabularyLessonList&Example.pdf",
+            "page": "u05-33b.html"
+        },
+        {
+            "linkId": "330",
+            "url": "http://theblackstallion.com/",
+            "page": "u05-33b.html"
+        },
+        {
+            "linkId": "331",
+            "url": "docs/VocabularyLessonList&Example.pdf",
+            "page": "u05-33b.html"
+        },
+        {
+            "linkId": "332",
+            "url": "docs/VocabularyLessonList&Example.pdf",
+            "page": "u05-34.html"
+        },
+        {
+            "linkId": "333",
+            "url": "http://theblackstallion.com",
+            "page": "u05-34.html"
+        },
+        {
+            "linkId": "334",
+            "url": "docs/VocabularyLessonList&Example.pdf",
+            "page": "u05-34.html"
+        },
+        {
+            "linkId": "335",
+            "url": "http://www.montessoriforlearning.com/Science/Cells/PlantCell3partcards.pdf",
+            "page": "u05-34b.html"
+        },
+        {
+            "linkId": "336",
+            "url": "http://www.montessoriforlearning.com/Science/Cells/AnimalCell3partcards.pdf",
+            "page": "u05-34b.html"
+        },
+        {
+            "linkId": "337",
+            "url": "http://www.indiana.edu/~istdept/R521/student_workbook.pdf",
+            "page": "u05-34b.html"
+        },
+        {
+            "linkId": "338",
+            "url": "docs/U5P34MakingPartsofaLessonMoreExplicit.pdf",
+            "page": "u05-34b.html"
+        },
+        {
+            "linkId": "339",
+            "url": "http://www.bscs.org/bscs-5e-instructional-model",
+            "page": "u05-34b.html"
+        },
+        {
+            "linkId": "340",
+            "url": "http://cosmos.bgsu.edu/research/duran.pdf",
+            "page": "u05-34b.html"
+        },
+        {
+            "linkId": "341",
+            "url": "docs/ScaffoldedSmallGroupLesson.pdf",
+            "page": "u05-35.html"
+        },
+        {
+            "linkId": "342",
+            "url": "javascript:void(0);",
+            "page": "u05-35.html"
+        },
+        {
+            "linkId": "343",
+            "url": "javascript:void(0);",
+            "page": "u05-35.html"
+        },
+        {
+            "linkId": "344",
+            "url": "docs/ScaffoldedSmallGroupLesson.pdf",
+            "page": "u05-35.html"
+        },
+        {
+            "linkId": "345",
+            "url": "http://www.montessoriforlearning.com/Science/Cells/PlantCell3partcards.pdf",
+            "page": "u05-36.html"
+        },
+        {
+            "linkId": "346",
+            "url": "http://www.montessoriforlearning.com/Science/Cells/AnimalCell3partcards.pdf",
+            "page": "u05-36.html"
+        },
+        {
+            "linkId": "347",
+            "url": "https://www.academia.edu/RegisterToDownload#RelatedPapers",
+            "page": "u05-36.html"
+        },
+        {
+            "linkId": "348",
+            "url": "docs/U5P36MakingPartsofaLessonMoreExplicit.pdf",
+            "page": "u05-36.html"
+        },
+        {
+            "linkId": "349",
+            "url": "http://www.bscs.org/bscs-5e-instructional-model",
+            "page": "u05-36.html"
+        },
+        {
+            "linkId": "350",
+            "url": "http://people.uncw.edu/kubaskod/SEC_406_506/Classes/Class_6_Planning/Learning_Cycle.pdf",
+            "page": "u05-36.html"
+        },
+        {
+            "linkId": "351",
+            "url": "docs/TeachinginaResponsiveLearningEnvironment.pdf",
+            "page": "u05-41.html"
+        },
+        {
+            "linkId": "352",
+            "url": "docs/TeachinginaResponsiveLearningEnvironment.pdf",
+            "page": "u05-41.html"
+        }
+    ]
+}
