@@ -1,74 +1,116 @@
 [
     {
-        "linkId": "61",
-        "title": "International Literacy Association",
-        "url": "http://www.reading.org/",
-        "tags": "etpswd,unit2,resource",
-        "isExternal": true,
-        "Error": "HTTPConnectionPool(host='www.reading.org', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x000001D17105EE10>, 'Connection to www.reading.org timed out. (connect timeout=10)'))"
-    },
-    {
-        "linkId": "107",
-        "title": "Marzano Art and Science of Teaching Framework Learning Map",
-        "url": "https://www.k12.wa.us/sites/default/files/public/tpep/frameworks/marzano/marzano_learning_map.pdf",
-        "tags": "etpswd,unit3,resource",
-        "isExternal": true,
+        "linkId": "0",
+        "url": "http://www.fl-pda.org/independent/courses/TSWD/content/resources/SB-1108-TAP.pdf",
+        "page": "over-02.html",
         "Error": "404 Status Code"
     },
     {
-        "linkId": "151",
-        "title": "Social Studies and Personalized learning: Emerging Promising Practices From the Field",
-        "url": "http://www.centeril.org/2016Handbook/resources/Woyshner_chapter_web.pdf",
-        "tags": "etpswd,unit5,resource",
-        "isExternal": true,
+        "linkId": "32",
+        "url": "http://www.coedu.usf.edu/main/departments/sped/mathvids/strategies/completelist.html",
+        "page": "ref-02.html",
         "Error": "404 Status Code"
     },
     {
-        "linkId": "175",
-        "title": "Florida's Exceptional Student Education Personal Development Portal",
+        "linkId": "49",
+        "url": "http://www.fcrr.org/assessment/ET",
+        "page": "ref-03.html",
+        "Error": "404 Status Code"
+    },
+    {
+        "linkId": "57",
+        "url": "http://ies.ed.gov/ncee/wwc/pdf/practice_guides/adlit_pg_082608.pdf",
+        "page": "ref-03.html",
+        "Error": "404 Status Code"
+    },
+    {
+        "linkId": "59",
+        "url": "http://www.coedu.usf.edu/main/departments/sped/mathvids/plans/plans.html",
+        "page": "ref-03.html",
+        "Error": "404 Status Code"
+    },
+    {
+        "linkId": "62",
+        "url": "http://cosmos.bgsu.edu/research/duran.pdf",
+        "page": "ref-03.html",
+        "Error": "HTTPConnectionPool(host='cosmos.bgsu.edu', port=80): Max retries exceeded with url: /research/duran.pdf (Caused by NameResolutionError(\"<urllib3.connection.HTTPConnection object at 0x0000024D21755B20>: Failed to resolve 'cosmos.bgsu.edu' ([Errno 11001] getaddrinfo failed)\"))"
+    },
+    {
+        "linkId": "68",
+        "url": "http://www.assessmentforlearning.edu.au\\default.asp",
+        "page": "ref-04.html",
+        "Error": "HTTPConnectionPool(host='www.assessmentforlearning.edu.au', port=80): Max retries exceeded with url: /%5Cdefault.asp (Caused by NameResolutionError(\"<urllib3.connection.HTTPConnection object at 0x0000024D2177B7A0>: Failed to resolve 'www.assessmentforlearning.edu.au' ([Errno 11001] getaddrinfo failed)\"))"
+    },
+    {
+        "linkId": "70",
+        "url": "http://www.fldoe.org/teaching/just-for-teachers-community/growth-mindset/",
+        "page": "ref-04.html",
+        "Error": "404 Status Code"
+    },
+    {
+        "linkId": "72",
+        "url": "http://aem.cast.org/about/publications/2003/ncac-differentiated-instruction-udl.html#.VzzGTJErJ48",
+        "page": "ref-04.html",
+        "Error": "404 Status Code"
+    },
+    {
+        "linkId": "73",
+        "url": "http://aem.cast.org/about/publications/2002/ncac-explicit-instruction.html#.VzzDPZErJ48",
+        "page": "ref-04.html",
+        "Error": "404 Status Code"
+    },
+    {
+        "linkId": "79",
+        "url": "http://www.ku-crl.org",
+        "page": "ref-05.html",
+        "Error": "HTTPSConnectionPool(host='www.ku-crl.org', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1000)')))"
+    },
+    {
+        "linkId": "82",
+        "url": "http://www.fcrr.org/assessment/ET/routines/routines.html",
+        "page": "ref-05.html",
+        "Error": "404 Status Code"
+    },
+    {
+        "linkId": "83",
+        "url": "http://www.coedu.usf.edu/main/departments/sped/mathvids/strategies/completelist.html",
+        "page": "ref-05.html",
+        "Error": "404 Status Code"
+    },
+    {
+        "linkId": "85",
+        "url": "http://www.coedu.usf.edu/main/departments/sped/mathvids/plans/plans.html",
+        "page": "ref-05.html",
+        "Error": "404 Status Code"
+    },
+    {
+        "linkId": "224",
+        "url": "http://www.teacherswithapps.com/21st-century-icebreakers-10-ways-to-get-to-know-your-students-with-technology/",
+        "page": "u04-08.html",
+        "Error": "404 Status Code"
+    },
+    {
+        "linkId": "299",
         "url": "http://pdportal.florida-ese.org/",
-        "tags": "etpswd,unit5,resource",
-        "isExternal": true,
-        "Error": "HTTPConnectionPool(host='pdportal.florida-ese.org', port=80): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D171034090>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))"
+        "page": "u05-28.html",
+        "Error": "HTTPConnectionPool(host='pdportal.florida-ese.org', port=80): Max retries exceeded with url: / (Caused by NameResolutionError(\"<urllib3.connection.HTTPConnection object at 0x0000024D21786BA0>: Failed to resolve 'pdportal.florida-ese.org' ([Errno 11001] getaddrinfo failed)\"))"
     },
     {
-        "linkId": "177",
-        "title": "Think-Alouds",
-        "url": "https://www.readingrockets.org/content/pdfs/thinkaloud_checklist.pdf",
-        "tags": "etpswd,unit5,resource",
-        "isExternal": true,
+        "linkId": "309",
+        "url": "http://www.ascd.org/publications/classroom-leadership/nov2001/Reciprocal-Teaching.aspx",
+        "page": "u05-30.html",
         "Error": "404 Status Code"
     },
     {
-        "linkId": "184",
-        "title": "Class-wide Peer Tutoring",
-        "url": "https://dev.fl-pda.org/independent/courses/EPTSWD/docs/ClasswidePeerTutoring.pdf",
-        "tags": "etpswd,unit5,resource",
-        "isExternal": true,
-        "Error": "('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))"
-    },
-    {
-        "linkId": "193",
-        "title": "Semantic Feature Analysis",
-        "url": "http://www.fl-pda.org/independent/courses/TSWD/content/unit04/docs/Semantic_Feature_Analysis.pdf",
-        "tags": "etpswd,unit5,resource",
-        "isExternal": true,
+        "linkId": "337",
+        "url": "http://www.indiana.edu/~istdept/R521/student_workbook.pdf",
+        "page": "u05-34b.html",
         "Error": "404 Status Code"
     },
     {
-        "linkId": "195",
-        "title": "Vocabulary Lesson Template and Vocabulary List",
-        "url": "https://fl-pda.org/independent/courses/EPTSWD/docs/VocabularyLessonTemplate.pdf",
-        "tags": "etpswd,unit5,resource",
-        "isExternal": true,
-        "Error": "404 Status Code"
-    },
-    {
-        "linkId": "369",
-        "title": "An Introduction to Classwide Peer Tutoring",
-        "url": "http://www.specialconnections.ku.edu/ ?q=instruction/classwide_peer_tutoring",
-        "tags": "tswd,tswd-unit4",
-        "isExternal": true,
-        "Error": "404 Status Code"
+        "linkId": "340",
+        "url": "http://cosmos.bgsu.edu/research/duran.pdf",
+        "page": "u05-34b.html",
+        "Error": "HTTPConnectionPool(host='cosmos.bgsu.edu', port=80): Max retries exceeded with url: /research/duran.pdf (Caused by NameResolutionError(\"<urllib3.connection.HTTPConnection object at 0x0000024D21787EC0>: Failed to resolve 'cosmos.bgsu.edu' ([Errno 11001] getaddrinfo failed)\"))"
     }
 ]
