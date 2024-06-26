@@ -1,9 +1,10 @@
 import os
+import sys
 from bs4 import BeautifulSoup
 import json
 
-# Directory containing the HTML files (you can place this file right in the project and remove it once you are done)
-directory = "./content"
+# Place directory containing the HTML files here
+directory = "ETPSWD/content"
 
 common = ""
 
@@ -53,13 +54,18 @@ def no_folders():
                         outfile.write(f"{writeOut}\n--")
 
 def uses_api():
+    all_ids = []
     with open(output_file, "w") as outfile:
         for filename in os.listdir(directory):
             if filename.endswith(".html"):
                 #unit_number = "unit" + filename.split('.')[0][0]
                 filepath = os.path.join(directory, filename)
-                
-                ids = get_linkIds(filepath)
+                file_ids = get_linkIds(filepath)
+                for id in file_ids:
+                    print("---Adding ID: " + str(id) + " From file: " + filepath + "---")
+                    all_ids.append(id)
+        print("Done")
+            
                     
 def get_linkIds(filepath):
     values = []
@@ -71,19 +77,20 @@ def get_linkIds(filepath):
         
         #soup.find_all returns a list of HTML elements matching <span data-linkApi-id...>
         #span_tag is an entry in this list which I treat as a string
-        for span_tag in soup.find_all('span', 'data-linkApi-id'):
+        for span_tag in soup.find_all('span'):
             tag_string = str(span_tag)
             value_string = ""
 
             value_location = tag_string.find('"') + 1 #first index of digit
             for char in tag_string[value_location:]:
-                if char.isdigit():
-                    value_string.append(char)
-                else:
-                    continue
+                if char == '"' and not char.isdigit():
+                    break
+                elif char.isdigit():
+                    value_string = value_string + char
             
-            value = int(value_string) #cast to int
-            values.append(value) #add to list
+            if(value_string.isdigit()):
+                value = int(value_string) #cast to int
+                values.append(value) #add to list
     return values
 
 def search_json(ids):
@@ -125,12 +132,21 @@ def parse_extracted():
     with open(os.path.join("data", "links2.json"), "w", encoding="utf-8") as json_file:
         json.dump(data, json_file, indent=4)
 
-def main(flag):
-    match flag:
-        case "-f":
-            folders()
-        case "-nf":
-            no_folders()
-        case "-api":
-            uses_api()
-    parse_extracted()
+if __name__ == "__main__":
+    print("Current working directory:", os.getcwd())
+    uses_api()
+    #parse_extracted()
+    # flag = sys.argv[1] # get flags
+    # match flag:
+    #     case "-f":
+    #         folders()
+    #         parse_extracted()
+    #     case "-nf":
+    #         no_folders()
+    #         parse_extracted()
+    #     case "-api":
+    #         uses_api()
+    #         parse_extracted()
+    #     case default:
+    #         print("Please provide flags: '-f' , '-nf', or '-api'")
+
