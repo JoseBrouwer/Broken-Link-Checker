@@ -6,7 +6,8 @@ import json
 # Place directory containing the HTML files here
 directory = "ETPSWD/content"
 
-common = ""
+# Place directory containing links.json here
+common = "Common/data"
 
 # Output file
 output_file = "extracted_links.txt"
@@ -50,21 +51,24 @@ def no_folders():
                         title = ' '.join(a_tag.get_text().split())
                         if link[0] == "#" or link == "../../":
                             continue
-                        writeOut = (f"\n{link}\n {title}\n {unit_number}")
+                        writeOut = (f"\n{link}\n {filename}")
                         outfile.write(f"{writeOut}\n--")
 
 def uses_api():
-    all_ids = []
+    all_ids = {}
     with open(output_file, "w") as outfile:
         for filename in os.listdir(directory):
             if filename.endswith(".html"):
                 #unit_number = "unit" + filename.split('.')[0][0]
                 filepath = os.path.join(directory, filename)
                 file_ids = get_linkIds(filepath)
-                for id in file_ids:
-                    print("---Adding ID: " + str(id) + " From file: " + filepath + "---")
-                    all_ids.append(id)
-        print("Done")
+
+                # for id in file_ids:
+                #     print("---Adding ID: " + str(id) + " From file: " + filepath + "---")
+
+                all_ids[str(filename)] = file_ids # set unit key to list of ids
+        print("Done getting IDs")
+
             
                     
 def get_linkIds(filepath):
@@ -83,7 +87,7 @@ def get_linkIds(filepath):
 
             value_location = tag_string.find('"') + 1 #first index of digit
             for char in tag_string[value_location:]:
-                if char == '"' and not char.isdigit():
+                if char == '"' or not char.isdigit():
                     break
                 elif char.isdigit():
                     value_string = value_string + char
