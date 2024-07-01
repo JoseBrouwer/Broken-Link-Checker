@@ -1,19 +1,44 @@
 import os
 import sys
 from bs4 import BeautifulSoup
+from tkinter import Tk, filedialog
 import json
 
 #Course folder
-course_directory = "ETPSWD/"
+course_directory = ""
 
 # Place directory containing the HTML files here
-content_directory = "ETPSWD/content"
-
-# Place directory containing links.json here
-common = "Common/data"
+content_directory = ""
 
 # Output file
 output_file = "extracted_links.txt"
+
+def get_file_path(file):
+    """
+    Opens a file selection dialog and returns the selected file path.
+    """
+    root = Tk()
+    root.withdraw()  # Hide the main window
+    if(file):
+        file_path = filedialog.askopenfilename()
+    else:
+        file_path = filedialog.askdirectory()
+    root.destroy() # Close the main window
+    return file_path
+
+
+def validate_json_file(file_path):
+    """
+    Checks if the selected file is a JSON file. If it is, return the file path,
+    otherwise, raise a ValueError.
+    """
+    if not file_path:  # Checks if the file path is not empty
+        raise ValueError("No file selected.")
+    _, file_extension = os.path.splitext(file_path)
+    if file_extension.lower() == ".json":
+        return file_path
+    else:
+        raise ValueError("Unsupported file type. Please select a JSON file.")
 
 def folders():
     with open(output_file, "w", encoding="utf-8") as outfile:
@@ -54,10 +79,6 @@ def no_folders():
 
 def uses_api():
     all_ids = {}
-    linkId = None
-    str_file_id = None
-    url = None
-    tags = None
     with open(output_file, "w") as outfile:
         for filename in os.listdir(content_directory):
             if filename.endswith(".html"):
@@ -109,15 +130,17 @@ def get_linkIds(filepath):
     return values
 
 def search_json():
-    links = None
-    json_path = input("Provide the absolute path of the JSON file:")
+    print("Provide the absolute path of the JSON file:")
+    file_path = get_file_path(True)
+    json_path = validate_json_file(file_path)
+    
     with open(json_path, 'r', encoding='utf-8') as json_file:
         links = json.load(json_file)
         print("Done retrieving JSON contents")
         return links    
 
 def parse_extracted():
-    with open("extracted_links.txt", "r", encoding="utf-8") as file:
+    with open("extracted_links.txt", "r", encoding="utf-8", errors="replace") as file:
         lines = file.readlines()
 
     # Process each link and store in a list in Mark's format
@@ -147,20 +170,26 @@ def parse_extracted():
         json.dump(data, json_file, indent=4)
 
 if __name__ == "__main__":
-    print("Current working directory:", os.getcwd())
-    uses_api()
-    parse_extracted()
-    # flag = sys.argv[1] # get flags
-    # match flag:
-    #     case "-f":
-    #         folders()
-    #         parse_extracted()
-    #     case "-nf":
-    #         no_folders()
-    #         parse_extracted()
-    #     case "-api":
-    #         uses_api()
-    #         parse_extracted()
-    #     case default:
-    #         print("Please provide flags: '-f' , '-nf', or '-api'")
+    if(len(sys.argv) < 2):
+        print("Please provide flags: '-f' , '-nf', or '-api'")
+    else:
+        print("Select the directory containing the course")
+        course_directory = get_file_path(False)
+
+        print("select the directory containing the content")
+        content_directory = get_file_path(False)
+
+        flag = sys.argv[1] # get flags
+        match flag:
+            case "-f":
+                folders()
+                parse_extracted()
+            case "-nf":
+                no_folders()
+                parse_extracted()
+            case "-api":
+                uses_api()
+                parse_extracted()
+            case default:
+                print("Please provide flags: '-f' , '-nf', or '-api'")
 

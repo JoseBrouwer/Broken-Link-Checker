@@ -78,6 +78,8 @@ try:
             else:
                 # For other domains, proceed as usual
                 response = requests.get(link['url'], allow_redirects=True, timeout=10)
+                if response.status_code != 200:
+                    print(f"Ended with status {response.status_code} at {response.url}")
 
             if response.status_code == 404:
                 # If 404, add to the broken_links list
