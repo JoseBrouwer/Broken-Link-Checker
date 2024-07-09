@@ -16,6 +16,12 @@ output_file = "extracted_links.txt"
 def get_file_path(file):
     """
     Opens a file selection dialog and returns the selected file path.
+
+    Args: 
+        file (boolean): True if searching for a file, False for a folder
+
+    Returns:
+        string: the path to the file
     """
     root = Tk()
     root.withdraw()  # Hide the main window
@@ -31,6 +37,13 @@ def validate_json_file(file_path):
     """
     Checks if the selected file is a JSON file. If it is, return the file path,
     otherwise, raise a ValueError.
+
+    Args:
+        file_path (string): the file to validate as a JSON
+
+    Returns:
+        string: file_path if valid
+        valueError: file_path is not valid
     """
     if not file_path:  # Checks if the file path is not empty
         raise ValueError("No file selected.")
@@ -130,7 +143,7 @@ def get_linkIds(filepath):
     return values
 
 def search_json():
-    print("Provide the absolute path of the JSON file:")
+    print("Select the links2.json file in the data folder:")
     file_path = get_file_path(True)
     json_path = validate_json_file(file_path)
     
