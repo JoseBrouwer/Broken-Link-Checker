@@ -43,6 +43,9 @@ try:
     # List to keep track of entries with 404 status
     broken_links = []
 
+    #List to keep track of final URL after redirection chain
+    redirected_links = []
+
     # Loop through each link in the JSON
     for link in data['links']:
         try:
@@ -51,41 +54,37 @@ try:
             domain = parsed_url.netloc
 
             # Check if the domain is from the ASCD site
-            if 'ascd.org' in domain:
-                with requests.Session() as session:
-                    session.max_redirects = 10  # Safeguard against infinite redirects
-                    response = session.get(link['url'], allow_redirects=False, timeout=10)
 
-                    # Check if initial response is a 404
-                    if response.status_code == 404:
-                        print(f"Initial 404 detected at {link['url']}")
+            with requests.Session() as session:
+                session.max_redirects = 10  # Safeguard against infinite redirects
+                response = session.get(link['url'], allow_redirects=False, timeout=10)
 
-                        # Manually handle redirects if 404 is detected initially
-                        while response.status_code in [301, 302, 303, 307, 308]:
-                            redirect_url = response.headers["Location"]
-                            print(f"Redirecting to {redirect_url}")
-                            response = session.get(
-                                redirect_url, allow_redirects=False, timeout=10
-                            )
-
-                        # Final URL status check
-                        if response.status_code == 200:
-                            print(f"Successfully redirected to {response.url} with status 200\n")
-                        else:
-                            print(f"Ended with status {response.status_code} at {response.url}\n")
-                    else:
-                        print(f"Initial status code {response.status_code} at {link['url']}\n")
-            else:
-                # For other domains, proceed as usual
-                response = requests.get(link['url'], allow_redirects=True, timeout=10)
+                # Check if initial response is a 404
                 if response.status_code != 200:
-                    print(f"Ended with status {response.status_code} at {response.url}")
+                    print(f"Initial Code is NOT 200 at {link['url']}")
 
-            if response.status_code == 404:
-                # If 404, add to the broken_links list
-                print(f"Broken link: {link['url']}\n")
-                link['Error'] = '404 Status Code'
-                broken_links.append(link)
+                    # Manually handle redirects if 404 is detected initially
+                    while response.status_code in [301, 302, 303, 307, 308]:
+                        redirect_url = response.headers["Location"]
+                        print(f"Redirecting to {redirect_url}")
+                        response = session.get(
+                            redirect_url, allow_redirects=False, timeout=10
+                        )
+
+                    # Final URL status check
+                    if response.status_code == 200:
+                        print(f"Successfully redirected to {response.url} with status 200\n")
+                        redirected_links.append(link['url'] + " Redirected to: " + response.url) #redirection chain ended
+                    elif response.status_code == 404:
+                        # If 404, add to the broken_links list
+                        print(f"Broken link: {link['url']}\n")
+                        link['Error'] = '404 Status Code'
+                        broken_links.append(link)
+                    else:
+                        print(f"Ended with status {response.status_code} at {response.url}\n")
+                else:
+                    print(f"Ended with status code {response.status_code} at {link['url']}\n")
+
         except requests.ConnectionError as e:
             print(f"Connection error while checking URL {link['url']}. Treating as 404. ERROR: {e}\n")
             link['Error'] = str(e)
@@ -97,11 +96,18 @@ try:
         except requests.RequestException as e:
             print(f"Error while checking URL {link['url']}: {e}\n")
             link['Error'] = str(e)
+            broken_links.append(link)
 
     # Print or save the broken links as needed
     with open('broken_links.json', 'w') as f:
         if(len(broken_links) > 0):
             f.write(json.dumps(broken_links, indent=4))
-    # print(json.dumps(broken_links, indent=4))
+    
+    #Save redirection chains to check where each link ends
+    with open('redirected_links.txt', 'w') as f:
+        if(len(redirected_links) > 0):
+            for link in redirected_links:
+                f.write(link + "\n")
+
 except ValueError as e:
     print(e)

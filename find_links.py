@@ -177,10 +177,10 @@ def parse_extracted():
 
     # Create a dictionary to store the links
     data = {"links": links}
-    data_path = course_directory + "/data"
     # Write the data to a JSON file in the 'data' directory
-    with open(os.path.join(data_path, "links2.json"), "w", encoding="utf-8") as json_file:
+    with open("links2.json", "w", encoding="utf-8") as json_file:
         json.dump(data, json_file, indent=4)
+    os.remove("extracted_links.txt")
 
 if __name__ == "__main__":
     if(len(sys.argv) < 2):
