@@ -54,36 +54,36 @@ try:
             domain = parsed_url.netloc
 
             # Check if the domain is from the ASCD site
+            if((domain != '') and (domain != None) and (domain[0] != '#')):
+                with requests.Session() as session:
+                    session.max_redirects = 10  # Safeguard against infinite redirects
+                    response = session.get(link['url'], allow_redirects=False, timeout=10)
 
-            with requests.Session() as session:
-                session.max_redirects = 10  # Safeguard against infinite redirects
-                response = session.get(link['url'], allow_redirects=False, timeout=10)
+                    # Check if initial response is a 404
+                    if response.status_code != 200:
+                        print(f"Initial Code is NOT 200 at {link['url']}")
 
-                # Check if initial response is a 404
-                if response.status_code != 200:
-                    print(f"Initial Code is NOT 200 at {link['url']}")
+                        # Manually handle redirects if 404 is detected initially
+                        while response.status_code in [301, 302, 303, 307, 308]:
+                            redirect_url = response.headers["Location"]
+                            print(f"Redirecting to {redirect_url}")
+                            response = session.get(
+                                redirect_url, allow_redirects=False, timeout=10
+                            )
 
-                    # Manually handle redirects if 404 is detected initially
-                    while response.status_code in [301, 302, 303, 307, 308]:
-                        redirect_url = response.headers["Location"]
-                        print(f"Redirecting to {redirect_url}")
-                        response = session.get(
-                            redirect_url, allow_redirects=False, timeout=10
-                        )
-
-                    # Final URL status check
-                    if response.status_code == 200:
-                        print(f"Successfully redirected to {response.url} with status 200\n")
-                        redirected_links.append(link['url'] + " Redirected to: " + response.url) #redirection chain ended
-                    elif response.status_code == 404:
-                        # If 404, add to the broken_links list
-                        print(f"Broken link: {link['url']}\n")
-                        link['Error'] = '404 Status Code'
-                        broken_links.append(link)
+                        # Final URL status check
+                        if response.status_code == 200:
+                            print(f"Successfully redirected to {response.url} with status 200\n")
+                            redirected_links.append(link['url'] + " Redirected to: " + response.url) #redirection chain ended
+                        elif response.status_code == 404:
+                            # If 404, add to the broken_links list
+                            print(f"Broken link: {link['url']}\n")
+                            link['Error'] = '404 Status Code'
+                            broken_links.append(link)
+                        else:
+                            print(f"Ended with status {response.status_code} at {response.url}\n")
                     else:
-                        print(f"Ended with status {response.status_code} at {response.url}\n")
-                else:
-                    print(f"Ended with status code {response.status_code} at {link['url']}\n")
+                        print(f"Ended with status code {response.status_code} at {link['url']}\n")
 
         except requests.ConnectionError as e:
             print(f"Connection error while checking URL {link['url']}. Treating as 404. ERROR: {e}\n")
