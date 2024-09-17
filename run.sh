@@ -3,6 +3,10 @@
 # Step 1: Install the requirements
 echo "Installing requirements from requirements.txt..."
 pip install -r requirements.txt
+sudo apt install python3-tk #Ubuntu/Debian
+# sudo dnf install python3-tkinter #Fedora
+# sudo pacman -S tk #Arch
+
 
 # Step 2: Define default flags for find_links.py
 FLAG=""
