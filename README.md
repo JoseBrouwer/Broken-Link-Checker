@@ -46,7 +46,7 @@
 ## Final step and its purpose 
 - Sometimes websites are hijacked by malicious actors and redirect users to their websites. 
 - For Example, say you go to **abc.com** but this website has been hijacked and redirects you to **gambling.com**. Now, it will rarely _(if ever)_ be this obviuous. Usually, URLs will look totally normal at a glance but when we go to the website it has undesireable content.
-- ### How do I check for instances like this?
+- ### How do I check for instances like these?
     - After you run `broken-link-check.py` a text file titled `redirected_links.txt` will appear in the folder for this program. This text file will contain the following text (one per line): 
     ```{URL} Redirected to {Redirected URL} ```
     - Clicking on the `Redirected URL` will take you to a links final destination. If this site looks off note the `URL` and find its location using `broken_links.json`. 
