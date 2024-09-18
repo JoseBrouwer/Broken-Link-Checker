@@ -1,3 +1,12 @@
+# Requires an installation of [Python](https://www.microsoft.com/store/productId/9NCVDN91XZQP?ocid=pdpshare) to use
+- If you are on Windows the hyperlink on the word 'Python' will take you to the microsoft store. This is the easiest way to install Python on Windows.
+- Mac/Linux, you already have Python installed. 
+- Check either installation by using these commands:
+    ```
+    Windows: python --version
+    Mac/Linux: python3 --version
+    ```
+    You'll see something like this: `Python 3.10.12` depending on the version you have, this will vary. **Anything starting with 3 should be fine.** 
 # How To Use 
 ### (**NOTE**: these commands assume you are in the Broken-Link-Checker Directory when you call them): `<download-location>/Broken-Link_Checker`
 1. Depending on your Operating System you will use one of two files, run.ps1 or run.sh.
@@ -41,11 +50,3 @@
     - After you run `broken-link-check.py` a text file titled `redirected_links.txt` will appear in the folder for this program. This text file will contain the following text (one per line): 
     ```{URL} Redirected to {Redirected URL} ```
     - Clicking on the `Redirected URL` will take you to a links final destination. If this site looks off note the `URL` and find its location using `broken_links.json`. 
-
-# Requires an installation of [Python](https://www.microsoft.com/store/productId/9NCVDN91XZQP?ocid=pdpshare) to use
-- If you are on Windows the hyperlink on the word 'Python' will take you to the microsoft store. This is the easiest way to install Python on Windows.
-- Mac/Linux, you already have Python installed. Check by using the following command:
-    ```
-    python3 --version
-    ```
-    You'll see something like this: `Python 3.10.12` depending on the version you have, this will vary. **Anything starting with 3 should be fine.** 
