@@ -6,13 +6,63 @@
     Windows: python --version
     Mac/Linux: python3 --version
     ```
-    You'll see something like this: `Python 3.10.12` depending on the version you have, this will vary. **Anything starting with 3 should be fine.** 
+    You'll see something like this: `Python 3.10.12` depending on the version you have, this will vary. **Anything starting with 3 should be fine.**
+
+# An installation of pip is required to use
+- ## pip comes pre-installed on Windows through the Microsoft Store
+- ## Mac is more involved: 
+    1. Install Homebrew (optional but recommended): If you don’t have Homebrew (a package manager for macOS), you can install it by running this in the Terminal:
+    ```
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    ```
+    2. Install Python (if not already installed):
+        - You can install Python 3, which comes with pip, using Homebrew:
+        ```
+        brew install python
+        ```
+    3. Verify pip Installation: After installation, check if pip is installed:
+    ```
+    pip3 --version
+    ```
+    4. Update pip: If needed, you can update pip to the latest version with:
+    ```
+    pip3 install --upgrade pip
+    ```
+    5. **IMPORTANT**: You **MUST** change line 5 of `run.sh` to `pip3 install -r requirements.txt` to make the script work!!!
+- ## Linux
+    1. Install Python (if not installed): Most Linux distributions come with Python pre-installed. To check, run:
+    ```
+    python3 --version
+    ```
+    2. Install pip: You can install pip by running the following commands based on your Linux distribution.
+        - Debian/Ubuntu: 
+        ```
+        sudo apt update
+        sudo apt install python3-pip
+        ```
+        - Fedora:
+        ```
+        sudo dnf install python3-pip
+        ```
+        - Arch: 
+        ```
+        sudo pacman -S python-pip
+        ```
+    3. Verify pip Installation: Once installed, verify the installation with:
+    ```
+    pip3 --version
+    ```
+    4. Update pip: You can update pip with:
+    ```
+    pip3 install --upgrade pip
+    ```
+
 # How To Use 
 ### (**NOTE**: these commands assume you are in the Broken-Link-Checker Directory when you call them): `<download-location>/Broken-Link_Checker`
 1. Depending on your Operating System you will use one of two files, run.ps1 or run.sh.
     - *See flags(-nf, -f, -api) in bullet #2*
     - Windows: `.\run.ps1 -nf` or `.\run.ps1 -f` or `.\run.ps1 -api` 
-    - Mac/Linux: `chmod +x script.sh` then `.\run.sh -nf` or `.\run.sh -f` or `.\run.sh -api`
+    - Mac/Linux: `chmod +x run.sh` then `./run.sh -nf` or `./run.sh -f` or `./run.sh -api`
     - ***NOTE Windows:*** Your Sys Admin may have blocked scripts from running on your computer for security purposes, if so proceed from step 2. 
     - ***IMPORTANT:*** If you run the program using these scripts you do not need to use the commandline anymore. All of the program executions are done for you. The points below explain what to select and where to find the broken links.
 1. The first program we use is `find_link.py`.
