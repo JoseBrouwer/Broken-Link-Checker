@@ -9,6 +9,12 @@ from urllib.parse import urlparse
 def get_file_path():
     """
     Opens a file selection dialog and returns the selected file path.
+
+    Args: 
+        None
+    
+    Returns: 
+        file_path (string): path to file sleected using GUI
     """
     root = Tk()
     root.withdraw()  # Hide the main window
@@ -16,11 +22,17 @@ def get_file_path():
     root.destroy() # Close the main window
     return file_path
 
-
 def validate_json_file(file_path):
     """
     Checks if the selected file is a JSON file. If it is, return the file path,
     otherwise, raise a ValueError.
+
+    Args: 
+        file_path (string): file path to the file to validate
+
+    Returns: 
+        file_path (string): file path to the validated file
+        ValueError: The file was not JSON and an error was raised
     """
     if not file_path:  # Checks if the file path is not empty
         raise ValueError("No file selected.")
@@ -31,6 +43,18 @@ def validate_json_file(file_path):
         raise ValueError("Unsupported file type. Please select a JSON file.")
     
 def test_link(link):
+    """
+    Tests an individual link for a valid HTTP response (not 404 or other Error). 
+    Redirection chains are logged in redirected_links.txt.
+    Broken links are logged in broken_links.json.
+
+    Args: 
+        link (dictionary): dictionary object containing key value pairs ('url': 'www.theurl.com')
+                            that need to be tested.
+
+    Returns: 
+        None, outputs to console, writes to redirected_links.txt or broken_links.json
+    """
     try:
         # Parse the URL to get the domain
         parsed_url = urlparse(link['url'])
