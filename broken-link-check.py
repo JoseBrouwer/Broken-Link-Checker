@@ -35,7 +35,7 @@ try:
     valid_json_path = validate_json_file(file_path)
     print(f"File validated: {valid_json_path}")
 
-    json_data = open(valid_json_path).read()
+    json_data = open(valid_json_path, encoding='utf-8-sig').read()
 
     # Convert the JSON string into a Python dictionary
     data = json.loads(json_data)
@@ -46,8 +46,11 @@ try:
     #List to keep track of final URL after redirection chain
     redirected_links = []
 
+    #prompt the user for the object to parse
+    arrayName = input("Please type the name of the array you wish to parse: ")
+
     # Loop through each link in the JSON
-    for link in data['links']:
+    for link in data[arrayName]:
         try:
             # Parse the URL to get the domain
             parsed_url = urlparse(link['url'])
@@ -92,11 +95,15 @@ try:
         except requests.Timeout as e:
             print(f"Timeout for URL {link['url']}. Treating as 404. ERROR: {e}\n")
             link['Error'] = str(e)
-            broken_links.append(link)
+            broken_links.append(link)        
         except requests.RequestException as e:
-            print(f"Error while checking URL {link['url']}: {e}\n")
-            link['Error'] = str(e)
-            broken_links.append(link)
+            if(e == requests.RequestException):
+                print(f"Invalid URL: {link['url']}. This may be caused by redirects after the request was made, check original link for issues. ERROR: {e}")
+            else:
+                print(f"Error while checking URL {link['url']}: {e}\n")
+                link['Error'] = str(e)
+                broken_links.append(link)
+
 
     # Print or save the broken links as needed
     with open('broken_links.json', 'w') as f:
