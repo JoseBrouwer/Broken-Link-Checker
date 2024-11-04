@@ -54,6 +54,17 @@ def validate_json_file(file_path):
         raise ValueError("Unsupported file type. Please select a JSON file.")
 
 def folders():
+    """
+    Navigates folder structure for HTML files.
+    Parses HTML files for anchor tags containing links that must be checked for validity.
+    Writes the found links along with the file they were found on, in extracted_links.txt.
+
+    Args:
+        None
+
+    Returns:
+        None, writes to extracted_links.txt
+    """
     if(content_directory != ""):
         with open(output_file, "w", encoding="utf-8") as outfile:
             for folder in os.listdir(content_directory):
@@ -75,6 +86,17 @@ def folders():
                                     outfile.write("--\n")
 
 def no_folders():
+    """
+    Navigates folder containing only HTML files.
+    Parses HTML files for anchor tags containing links that must be checked for validity.
+    Writes the found links along with the file they were found on, in extracted_links.txt.
+
+    Args:
+        None
+
+    Returns:
+        None, writes to extracted_links.txt
+    """
     if(content_directory != ""):
         with open(output_file, "w") as outfile:
             for filename in os.listdir(content_directory):
@@ -93,6 +115,18 @@ def no_folders():
                             outfile.write("--\n")
 
 def uses_api():
+    """
+    Navigates folder containing only HTML files.
+    Retrieves a set of IDs used within the HTML page found in span tags using get_linkIds(filepath).
+    Cross refreneces retrieved IDs with IDs in selected JSON file.
+    Writes the found links along with the file they were found on, in extracted_links.txt.
+
+    Args:
+        None
+
+    Returns:
+        None, writes to extracted_links.txt
+    """
     if(content_directory != ""):
         all_ids = {}
         with open(output_file, "w") as outfile:
@@ -122,6 +156,16 @@ def uses_api():
         print("Done Writing for API")
           
 def get_linkIds(filepath):
+    """
+    Parses and HTML file for span tags. From these tags, retrieves the id 
+    (<span data-linkApi-id="1"> the ID being '1') and stores it in a list
+
+    Args:
+       filepath (string): path to HTML document to parse for span tags
+
+    Returns:
+        values (list): a list of id's found in the HTML file located at filepath
+    """
     if(content_directory != ""):
         values = []
         #Get a list of ids to search in links.json
@@ -147,6 +191,15 @@ def get_linkIds(filepath):
         return values
 
 def search_json():
+    """
+    Opens the JSON file used to cross referenece the IDs obtained in get_linkIds
+
+    Args:
+       None
+
+    Returns:
+        links (json): json object containing links used in courses
+    """
     if(content_directory != ""):
         print("Select the JSON file in this program's folder:")
         file_path = get_file_path(True)
@@ -158,6 +211,16 @@ def search_json():
             return links    
 
 def parse_extracted():
+    """
+    parses extracted_links.txt into a JSON format parallel to the one expected by
+    broken-link-check.py.
+
+    Args:
+       None
+
+    Returns:
+        None, writes to links2.json and deletes extracted_links.txt
+    """
     if(content_directory != ""):
         with open("extracted_links.txt", "r", encoding="utf-8", errors="replace") as file:
             lines = file.readlines()
