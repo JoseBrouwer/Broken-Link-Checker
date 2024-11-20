@@ -59,13 +59,37 @@
 
 # How To Use 
 ### (**NOTE**: these commands assume you are in the Broken-Link-Checker Directory when you call them): `<download-location>/Broken-Link_Checker`
+
+## The Easy Way
 1. Depending on your Operating System you will use one of two files, run.ps1 or run.sh.
-    - *See flags(-nf, -f, -api) in bullet #2*
+    - Look at the **course structure** to pick **FLAGS**: 
+        - No folders: -nf
+        - Folders: -f
+        - API: -api
     - Windows: `.\run.ps1 -nf` or `.\run.ps1 -f` or `.\run.ps1 -api` 
     - Mac/Linux: `chmod +x run.sh` then `./run.sh -nf` or `./run.sh -f` or `./run.sh -api`
     - ***NOTE Windows:*** Your Sys Admin may have blocked scripts from running on your computer for security purposes, if so proceed from step 2. 
     - ***IMPORTANT:*** If you run the program using these scripts you do not need to use the commandline anymore. All of the program executions are done for you. The points below explain what to select and where to find the broken links.
-2. The first program we use is `find_link.py`.
+2.  
+- Windows:
+    ```
+    .\run.ps1 [Flag]
+    ```
+- Linux:
+    ```
+    ./run.sh [Flag]
+    ```
+3. select the folder(s) indicated on the terminal in sequential order, it may say the folder for the course, the content folder, the links.json file, or the links2.json
+    - Depends on the selected flag, you should be prompted for a specific folder. If not, look at `The Involved Way` for detailed steps of what to do next
+4. When you see `Running broken-link-check.py...` select the `links2.json` file in the `Broken-Link-Checker` folder on your computer
+    - After all the correct files are selected the links are tested
+    - All broken links are found in `broken_links.json`
+5. Check `redirected_links.txt` for any weird sites by clicking on the link to the right `Redirected To`.
+    - If this link takes you somewhere weird (gambling site, adult site, unrelated to course content) 
+    - Then the link on the left of `Redirected to` must be incluided in the Broken Link Report
+
+## The Involved Way
+1. The first program we use is `find_link.py`.
     - We use it differently depending on the structure of the course: 
         - HTML files are ***not in*** folders within `<course-name>/content`:
             1. Windows: `python .\find_links.py -nf`
@@ -77,20 +101,20 @@
             1. Windows: `python .\find_links.py -api`
             2. Mac/Linux: `python3 ./find_links.py -api`
         
-3. Run `find_links.py` and select the following in this order, using the file explorer that comes up: 
+2. Run `find_links.py` and select the following in this order, using the file explorer that comes up: 
     1. Directory containing the course
     2. Directory containing the course content
     3. links.json file in the data folder **(If using `-api` flag)**
-4. This will output `links2.json` in the directory for this program
-5. Run `broken-link-check.py`
+3. This will output `links2.json` in the directory for this program
+4. Run `broken-link-check.py`
     -  This will open the windows file explorer
-6. Select the JSON file that contains the links you want to parse (`links2.json`)
+5. Select the JSON file that contains the links you want to parse (`links2.json`)
     - Note the file MUST be in JSON format
     - All the JSON file needs to include is a key labeled `url` to check the website
     - The program will run it's course printing to the terminal when a site is considered broken
     - For resons other than an immediate 404 status code, additional context will be provided
     - Output is placed in `broken_links.json` in the same format provided
-7. The console will prompt you to type the name of the array object you want to parse.
+6. The console will prompt you to type the name of the array object you want to parse.
     - Any use of the linkApi (usually newer BEESS courses) will usually be titled "links"
     - Other projects maybe titled "resources"
     - ***Check your JSON file for the correct object name***
@@ -107,8 +131,8 @@
             }]
         }
     ```
-8. In the same directory as the `broken-link-check.py` you will find the `broken_links.json` file, containing all of the links deemed 'broken' along with the error. 
-9. The `file` key indicates the HTML file that conatins the link. You must match this file to the url assigned in the `data/Pages.json` file ***(Suggested if content on webpage does not match html file).***
+7. In the same directory as the `broken-link-check.py` you will find the `broken_links.json` file, containing all of the links deemed 'broken' along with the error. 
+8. The `file` key indicates the HTML file that conatins the link. You must match this file to the url assigned in the `data/Pages.json` file ***(Suggested if content on webpage does not match html file).***
 
 ## Final step and its purpose 
 - Sometimes websites are hijacked by malicious actors and redirect users to their websites. 
