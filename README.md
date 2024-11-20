@@ -11,48 +11,48 @@
 # An installation of pip is required to use
 - ## pip comes pre-installed on Windows through the Microsoft Store
 - ## Mac is more involved: 
-    1. Install Homebrew (optional but recommended): If you don’t have Homebrew (a package manager for macOS), you can install it by running this in the Terminal:
+1. Install Homebrew (optional but recommended): If you don’t have Homebrew (a package manager for macOS), you can install it by running this in the Terminal:
     ```
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     ```
-    2. Install Python (if not already installed):
+2. Install Python (if not already installed):
         - You can install Python 3, which comes with pip, using Homebrew:
         ```
         brew install python
         ```
-    3. Verify pip Installation: After installation, check if pip is installed:
+3. Verify pip Installation: After installation, check if pip is installed:
     ```
     pip3 --version
     ```
-    4. Update pip: If needed, you can update pip to the latest version with:
+4. Update pip: If needed, you can update pip to the latest version with:
     ```
     pip3 install --upgrade pip
     ```
-    5. **IMPORTANT**: You **MUST** change line 5 of `run.sh` to `pip3 install -r requirements.txt` to make the script work!!!
+5. **IMPORTANT**: You **MUST** change line 5 of `run.sh` to `pip3 install -r requirements.txt` to make the script work!!!
 - ## Linux
-    1. Install Python (if not installed): Most Linux distributions come with Python pre-installed. To check, run:
+1. Install Python (if not installed): Most Linux distributions come with Python pre-installed. To check, run:
     ```
     python3 --version
     ```
-    2. Install pip: You can install pip by running the following commands based on your Linux distribution.
-        - Debian/Ubuntu: 
+2. Install pip: You can install pip by running the following commands based on your Linux distribution.
+    - Debian/Ubuntu: 
         ```
         sudo apt update
         sudo apt install python3-pip
         ```
-        - Fedora:
+    - Fedora:
         ```
         sudo dnf install python3-pip
         ```
-        - Arch: 
+    - Arch: 
         ```
         sudo pacman -S python-pip
         ```
-    3. Verify pip Installation: Once installed, verify the installation with:
+3. Once installed, verify the installation with:
     ```
     pip3 --version
     ```
-    4. Update pip: You can update pip with:
+4. Update pip: You can update pip with:
     ```
     pip3 install --upgrade pip
     ```
@@ -68,7 +68,7 @@
         - API: -api
     - Windows: `.\run.ps1 -nf` or `.\run.ps1 -f` or `.\run.ps1 -api` 
     - Mac/Linux: `chmod +x run.sh` then `./run.sh -nf` or `./run.sh -f` or `./run.sh -api`
-    - ***NOTE Windows:*** Your Sys Admin may have blocked scripts from running on your computer for security purposes, if so proceed from step 2. 
+    - ***NOTE Windows:*** Your Sys Admin may have blocked scripts from running on your computer for security purposes, if so follow `The Involved Way`. 
     - ***IMPORTANT:*** If you run the program using these scripts you do not need to use the commandline anymore. All of the program executions are done for you. The points below explain what to select and where to find the broken links.
 2.  
 - Windows:
@@ -82,9 +82,9 @@
 3. select the folder(s) indicated on the terminal in sequential order, it may say the folder for the course, the content folder, the links.json file, or the links2.json
     - Depends on the selected flag, you should be prompted for a specific folder. If not, look at `The Involved Way` for detailed steps of what to do next
 4. When you see `Running broken-link-check.py...` select the `links2.json` file in the `Broken-Link-Checker` folder on your computer
-    - After all the correct files are selected the links are tested
+    - After all the correct files are selected, the links are tested
     - All broken links are found in `broken_links.json`
-5. Check `redirected_links.txt` for any weird sites by clicking on the link to the right `Redirected To`.
+5. Check `redirected_links.txt` for any weird sites by clicking on the link to the right of `Redirected To`.
     - If this link takes you somewhere weird (gambling site, adult site, unrelated to course content) 
     - Then the link on the left of `Redirected to` must be incluided in the Broken Link Report
 
