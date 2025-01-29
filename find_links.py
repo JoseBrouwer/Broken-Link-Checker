@@ -114,102 +114,6 @@ def no_folders():
                             #outfile.write(f"Tags: {tags}\n")
                             outfile.write("--\n")
 
-def uses_api():
-    """
-    Navigates folder containing only HTML files.
-    Retrieves a set of IDs used within the HTML page found in span tags using get_linkIds(filepath).
-    Cross refreneces retrieved IDs with IDs in selected JSON file.
-    Writes the found links along with the file they were found on, in extracted_links.txt.
-
-    Args:
-        None
-
-    Returns:
-        None, writes to extracted_links.txt
-    """
-    if(content_directory != ""):
-        all_ids = {}
-        with open(output_file, "w") as outfile:
-            for filename in os.listdir(content_directory):
-                if filename.endswith(".html"):
-                    filepath = os.path.join(content_directory, filename)
-                    file_ids = get_linkIds(filepath)
-                    all_ids[str(filename)] = file_ids # set key's (the file's) value to a list of ids
-            
-            print("Done getting IDs")
-            links = search_json()
-            
-            # Iterate over each filename and its associated IDs
-            for filename, file_ids in all_ids.items():
-                for file_id in file_ids:
-                    str_file_id = str(file_id)
-                    # Search for the file_id in the links from the JSON file
-                    for link in links["links"]:
-                        if link["linkId"] == str_file_id:
-                            url = link["url"]
-                            tags = link["tags"]
-                            # Write the filename along with the other link data to the output file
-                            outfile.write(f"{filename}\n")
-                            outfile.write(f"{url}\n")
-                            #outfile.write(f"Tags: {tags}\n")
-                            outfile.write("--\n")
-        print("Done Writing for API")
-          
-def get_linkIds(filepath):
-    """
-    Parses and HTML file for span tags. From these tags, retrieves the id 
-    (<span data-linkApi-id="1"> the ID being '1') and stores it in a list
-
-    Args:
-       filepath (string): path to HTML document to parse for span tags
-
-    Returns:
-        values (list): a list of id's found in the HTML file located at filepath
-    """
-    if(content_directory != ""):
-        values = []
-        #Get a list of ids to search in links.json
-        with open(filepath, 'r', encoding='utf-8') as html_file:
-            soup = BeautifulSoup(html_file, 'html.parser')
-            
-            #soup.find_all returns a list of HTML elements matching <span data-linkApi-id...>
-            #span_tag is an entry in this list which I treat as a string
-            for span_tag in soup.find_all('span'):
-                tag_string = str(span_tag)
-                value_string = ""
-
-                value_location = tag_string.find('"') + 1 #first index of digit
-                for char in tag_string[value_location:]:
-                    if char == '"' or not char.isdigit():
-                        break
-                    elif char.isdigit():
-                        value_string = value_string + char
-                
-                if(value_string.isdigit()):
-                    value = int(value_string) #cast to int
-                    values.append(value) #add to list
-        return values
-
-def search_json():
-    """
-    Opens the JSON file used to cross referenece the IDs obtained in get_linkIds
-
-    Args:
-       None
-
-    Returns:
-        links (json): json object containing links used in courses
-    """
-    if(content_directory != ""):
-        print("Select the JSON file in this program's folder:")
-        file_path = get_file_path(True)
-        json_path = validate_json_file(file_path)
-        
-        with open(json_path, 'r', encoding='utf-8') as json_file:
-            links = json.load(json_file)
-            print("Done retrieving JSON contents")
-            return links    
-
 def parse_extracted():
     """
     parses extracted_links.txt into a JSON format parallel to the one expected by
@@ -253,7 +157,7 @@ def parse_extracted():
 
 if __name__ == "__main__":
     if(len(sys.argv) < 2):
-        print("Please provide flags: '-f' , '-nf', or '-api'")
+        print("Please provide flags: '-f' or '-nf'")
     else:
         print("Select the directory containing the course")
         course_directory = get_file_path(False)
@@ -269,9 +173,5 @@ if __name__ == "__main__":
             case "-nf":
                 no_folders()
                 parse_extracted()
-            case "-api":
-                uses_api()
-                parse_extracted()
             case default:
-                print("Please provide flags: '-f' , '-nf', or '-api'")
-
+                print("Please provide flags: '-f' or '-nf'")

@@ -60,27 +60,26 @@
 # How To Use 
 ### (**NOTE**: these commands assume you are in the Broken-Link-Checker Directory when you call them): `<download-location>/Broken-Link_Checker`
 
-## The Easy Way
+## For Old Courses (No use of link API)
 1. Depending on your Operating System you will use one of two files, run.ps1 or run.sh.
     - Look at the **course structure** to pick **FLAGS**: 
         - No folders: -nf
         - Folders: -f
-        - API: -api
-    - Windows: `.\run.ps1 -nf` or `.\run.ps1 -f` or `.\run.ps1 -api` 
-    - Mac/Linux: `chmod +x run.sh` then `./run.sh -nf` or `./run.sh -f` or `./run.sh -api`
-    - ***NOTE Windows:*** Your Sys Admin may have blocked scripts from running on your computer for security purposes, if so follow `The Involved Way`. 
-    - ***IMPORTANT:*** If you run the program using these scripts you do not need to use the commandline anymore. All of the program executions are done for you. The points below explain what to select and where to find the broken links.
+    - Windows: `.\run.ps1 -nf` or `.\run.ps1 -f`
+    - Mac/Linux: `chmod +x run.sh` then `./run.sh -nf` or `./run.sh -f`
+    - ***NOTE Windows:*** Your Sys Admin may have blocked scripts from running on your computer for security purposes, if so follow `The Complete Process`. 
+    - ***IMPORTANT:*** If you run the program using these scripts you do not need to use the commandline to run programs anymore. All of the program executions are done for you. The points below explain what to select and where to find the broken links.
 2.  
 - Windows:
     ```
     .\run.ps1 [Flag]
     ```
-- Linux:
+- Mac/Linux:
     ```
     ./run.sh [Flag]
     ```
 3. select the folder(s) indicated on the terminal in sequential order, it may say the folder for the course, the content folder, the links.json file, or the links2.json
-    - Depends on the selected flag, you should be prompted for a specific folder. If not, look at `The Involved Way` for detailed steps of what to do next
+    - Depends on the selected flag, you should be prompted for a specific folder. If not, look at `The Complete Process` for detailed steps of what to do next
 4. When you see `Running broken-link-check.py...` select the `links2.json` file in the `Broken-Link-Checker` folder on your computer
     - After all the correct files are selected, the links are tested
     - All broken links are found in `broken_links.json`
@@ -88,7 +87,22 @@
     - If this link takes you somewhere weird (gambling site, adult site, unrelated to course content) 
     - Then the link on the left of `Redirected to` must be incluided in the Broken Link Report
 
-## The Involved Way
+## Courses with the link API
+1. Run `broken-link-check.py`:
+- Windows: 
+    ```
+    python .\broken-link-check.py
+    ```
+- Mac/Linux:
+    ```
+    python3 ./broken-link-check.py
+    ```
+2. In the file explorer window that opens, select `data/<JSON File with links>` (usually `data/links.json`)
+3. When prompted in the console, type the name of the array object you want to parse. This can be `links`, `resources`, `items`, etc. 
+- See step 6 of `The Complete Process` for examples if you don't know what to look for.
+4. Output is placed in `broken_links.json` in the same format provided
+
+## The Complete Process
 1. The first program we use is `find_link.py`.
     - We use it differently depending on the structure of the course: 
         - HTML files are ***not in*** folders within `<course-name>/content`:
@@ -97,18 +111,14 @@
         - HTML files are **in** folders within `<course-name>/content`:
             1. Windows: `python .\find_links.py -f`
             2. Mac/Linux: `python3 ./find_links.py -f`
-        - Within the `<course-name>/data` directory you have a `links.json` file:
-            1. Windows: `python .\find_links.py -api`
-            2. Mac/Linux: `python3 ./find_links.py -api`
         
 2. Run `find_links.py` and select the following in this order, using the file explorer that comes up: 
     1. Directory containing the course
     2. Directory containing the course content
-    3. links.json file in the data folder **(If using `-api` flag)**
 3. This will output `links2.json` in the directory for this program
 4. Run `broken-link-check.py`
     -  This will open the windows file explorer
-5. Select the JSON file that contains the links you want to parse (`links2.json`)
+5. Select the JSON file that contains the links you want to parse (`links2.json` or `data/links.json`)
     - Note the file MUST be in JSON format
     - All the JSON file needs to include is a key labeled `url` to check the website
     - The program will run it's course printing to the terminal when a site is considered broken
