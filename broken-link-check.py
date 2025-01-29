@@ -65,9 +65,10 @@ def copy_and_write_broken_link(link, url):
 
 def test_link(link):
     """
-    Tests an individual link for a valid HTTP response (not 404 or other Error). 
-    Redirection chains are logged in redirected_links.txt.
-    Broken links are logged in broken_links.json.
+    Checks if the url key is an object or not. If it is, iterate through every link in the object
+    and check the URL for expected responses by calling check_url(link, url). If check fails, the
+    entire object (with just the broken link) will be written to broken_links.json by the
+    copy_and_write_broken_link(link, url) function.
 
     Args: 
         link (dictionary): dictionary object containing key value pairs ('url': 'www.theurl.com')
@@ -89,6 +90,19 @@ def test_link(link):
         copy_and_write_broken_link(link, url)
 
 def check_url(link, url):
+    """
+    Tests an individual link for a valid HTTP response (not 404 or other Error). 
+    Redirection chains are logged in redirected_links.txt.
+    Broken links are logged in broken_links.json.
+
+    Args: 
+        link (dictionary): dictionary object containing key value pairs ('url': 'www.theurl.com')
+            that need to be tested.
+        url (dictionary, string): The url string to be tested for a valid response.
+
+    Returns: 
+        None, outputs to console, writes to redirected_links.txt or broken_links.json
+    """
     try:
         # Parse the URL to get the domain
         parsed_url = urlparse(url)
