@@ -14,7 +14,6 @@ while [[ "$#" -gt 0 ]]; do
     case $1 in
         (-f|--flag) FLAG="-f";;           # Example: -f option
         (-nf|--no-flag) NO_FLAG="-nf";;   # Example: -nf option
-        (-api|--api) API_FLAG="-api";;    # Example: -api option
         *) echo "Unknown parameter: $1"; exit 1;;
     esac
     shift
