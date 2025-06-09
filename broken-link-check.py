@@ -63,7 +63,7 @@ def copy_and_write_broken_link(link, url):
     else:
         broken_links.append(link)
 
-def test_link(link):
+def test_link(link, depth=0):
     """
     Checks if the url key is an object or not. If it is, iterate through every link in the object
     and check the URL for expected responses by calling check_url(link, url). If check fails, the
@@ -77,19 +77,26 @@ def test_link(link):
     Returns: 
         None, outputs to console, writes to redirected_links.txt or broken_links.json
     """
+    if depth > 3:
+        print(f"Max recursion depth reached for link: {link}")
+        link['Error'] = "Max recursion depth reached for link."
+
+        url_value = link['url']
+        copy_and_write_broken_link(link, url_value)
+        return
     try:
         url_value = link['url']
         if isinstance(url_value, dict):
             for lang, url in url_value.items():
-                check_url(link, url)
+                check_url(link, url, depth)
         else:
-            check_url(link, url_value)
+            check_url(link, url_value, depth)
     except requests.RequestException as e:
         print(f"{type(e)} -> Error while checking URL {link['url']}: {e}\n")
         link['Error'] = str(e)
         copy_and_write_broken_link(link, url)
 
-def check_url(link, url):
+def check_url(link, url, depth=0):
     """
     Tests an individual link for a valid HTTP response (not 404 or other Error). 
     Redirection chains are logged in redirected_links.txt.
@@ -157,7 +164,7 @@ def check_url(link, url):
             missing_path = match.group(1)
             new_URL = "https://" + domain + missing_path
             print(f"The new URL is: {new_URL}\n")
-            test_link({"url": new_URL})  # Pass as a dictionary with the new URL for testing
+            test_link({"url": new_URL}, depth = depth + 1)  # Pass as a dictionary with the new URL for testing
         else:
             print("Could not extract missing path from the error message.") 
     
