@@ -63,7 +63,7 @@ def copy_and_write_broken_link(link, url):
     else:
         broken_links.append(link)
 
-def test_link(link, depth=0):
+def test_value(link, depth=0):
     """
     Checks if the url key is an object or not. If it is, iterate through every link in the object
     and check the URL for expected responses by calling check_url(link, url). If check fails, the
@@ -164,7 +164,7 @@ def check_url(link, url, depth=0):
             missing_path = match.group(1)
             new_URL = "https://" + domain + missing_path
             print(f"The new URL is: {new_URL}\n")
-            test_link({"url": new_URL}, depth = depth + 1)  # Pass as a dictionary with the new URL for testing
+            test_value({"url": new_URL}, depth = depth + 1)  # Pass as a dictionary with the new URL for testing
         else:
             print("Could not extract missing path from the error message.") 
     
@@ -189,7 +189,7 @@ try:
 
     # Loop through each link in the JSON
     for link in data[array_name]:
-        test_link(link)
+        test_value(link)
 
     # Print or save the broken links as needed
     with open('broken_links.json', 'w') as f:
