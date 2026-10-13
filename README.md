@@ -1,8 +1,13 @@
-# Link Checker
+# Broken Link Checker
 
 A web application for finding **broken** and **redirected** links inside your course's HTML and JSON files. Point it at a folder (or a handful of files), and it scans every link, reports which ones are dead or redirecting, and lets you export the results to CSV.
 
 It is a browser-based re-imagining of the original Python `Broken-Link-Checker` script: instead of running a command-line tool, you get an interactive UI with live progress, filterable results, and one-click CSV export.
+
+## Project History
+What started out as a Python script I worked on in my free time to make my life easier and automate a very manual process, has grown into something much larger. The adoption and use of the original Python script was so well recieved, other teams and project managers who were not comfortable with the Command Line wanted in on this tool.
+
+Since then the script was transformed into a local web application, applying the best practices I learned from my professional work. Now the application boasts a robust front-end clearly communicating information to the user and providing features like CSV Exports, Column Sorting, Column Filters, and Statistics.
 
 ## What It Does
 
