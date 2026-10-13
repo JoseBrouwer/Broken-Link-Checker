@@ -1,0 +1,17 @@
+// Variables
+$primary-color: #4A90E2;
+$background-color: #FFFFFF;
+$card-background: #FFFFFF;
+$text-color: #333333;
+$subtitle-color: #555555;
+$border-color: #DDDDDD;
+$stat-broken-color: #D0021B;
+$stat-redirects-color: #F5A623;
+$stat-checked-color: #7ED321;
+
+.link-validator {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: $background-color;
+  padding: 2rem;
+  color: $text-color;
+}

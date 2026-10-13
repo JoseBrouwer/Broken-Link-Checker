@@ -1,153 +1,135 @@
-# Requires an installation of [Python](https://www.microsoft.com/store/productId/9NCVDN91XZQP?ocid=pdpshare) to use
-- If you are on Windows the hyperlink on the word 'Python' will take you to the microsoft store. This is the easiest way to install Python on Windows.
-- Mac/Linux, you already have Python installed. 
-- Check either installation by using these commands:
-    ```
-    Windows: python --version
-    Mac/Linux: python3 --version
-    ```
-    You'll see something like this: `Python 3.10.12` depending on the version you have, this will vary. **Anything starting with 3 should be fine.**
+# Broken Link Checker
 
-# An installation of pip is required to use
-- ## pip comes pre-installed on Windows through the Microsoft Store
-- ## Mac is more involved: 
-1. Install Homebrew (optional but recommended): If you don’t have Homebrew (a package manager for macOS), you can install it by running this in the Terminal:
-    ```
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    ```
-2. Install Python (if not already installed):
-        - You can install Python 3, which comes with pip, using Homebrew:
-        ```
-        brew install python
-        ```
-3. Verify pip Installation: After installation, check if pip is installed:
-    ```
-    pip3 --version
-    ```
-4. Update pip: If needed, you can update pip to the latest version with:
-    ```
-    pip3 install --upgrade pip
-    ```
-5. **IMPORTANT**: You **MUST** change line 5 of `run.sh` to `pip3 install -r requirements.txt` to make the script work!!!
-- ## Linux
-1. Install Python (if not installed): Most Linux distributions come with Python pre-installed. To check, run:
-    ```
-    python3 --version
-    ```
-2. Install pip: You can install pip by running the following commands based on your Linux distribution.
-    - Debian/Ubuntu: 
-        ```
-        sudo apt update
-        sudo apt install python3-pip
-        ```
-    - Fedora:
-        ```
-        sudo dnf install python3-pip
-        ```
-    - Arch: 
-        ```
-        sudo pacman -S python-pip
-        ```
-3. Once installed, verify the installation with:
-    ```
-    pip3 --version
-    ```
-4. Update pip: You can update pip with:
-    ```
-    pip3 install --upgrade pip
+A web application for finding **broken** and **redirected** links inside your course's HTML and JSON files. Point it at a folder (or a handful of files), and it scans every link, reports which ones are dead or redirecting, and lets you export the results to CSV.
+
+It is a browser-based re-imagining of the original Python `Broken-Link-Checker` script: instead of running a command-line tool, you get an interactive UI with live progress, filterable results, and one-click CSV export.
+
+## Project History
+What started out as a Python script I worked on in my free time to make my life easier and automate a very manual process, has grown into something much larger. The adoption and use of the original Python script was so well recieved, other teams and project managers who were not comfortable with the Command Line wanted in on this tool.
+
+Since then the script was transformed into a local web application, applying the best practices I learned from my professional work. Now the application boasts a robust front-end clearly communicating information to the user and providing features like CSV Exports, Column Sorting, Column Filters, and Statistics.
+
+## What It Does
+
+- **Scans `.html` and `.json` files** for links.
+  - In HTML files it reads every `<a>` tag and collects the `href` (only `http://` / `https://` links) plus the anchor text.
+  - In JSON files it looks for a `links` array and reads each entry's `url`. If no `links` array is present (or the JSON can't be parsed), it falls back to a regex that pulls any `http(s)` URL out of the raw content.
+- **Deduplicates links** and tracks, for each unique URL, which file(s) it came from and what link text(s) it was used with.
+- **Checks every link** over the network and classifies it:
+  - **OK** — the link resolves (HTTP 2xx).
+  - **Broken** — the link fails (HTTP 4xx/5xx, DNS error, timeout, etc.). The specific error is shown in the *Details* column.
+  - **Redirecting** — the link returns a 3xx and points somewhere else. The destination is shown (and clickable) in the *Details* column.
+  - **Redirecting secure** — a special case of a redirect where an `http://` link simply upgrades to the identical `https://` URL. These are usually harmless and are called out separately so you can ignore them.
+- **Reference-directory matching (optional).** When you select a single JSON file, you can also point the app at a directory of HTML files. It matches each link's ID in the JSON against `data-linkapi-id` attributes in those HTML files to work out which links are actually used on the pages, where they appear, and their surrounding text. Links in the JSON that aren't referenced anywhere are flagged as **Not Used!**.
+- **Reports and exports.** Results are shown in a sortable, filterable table with **Broken / Redirects / All** tabs and a live statistics panel (total, checked, broken, redirects). You can hide/show columns and download the current tab as a CSV file.
+
+## How to Use It
+
+1. **Select your sources.** Click **Directory** to pick a whole folder, or **Files** to pick individual files. Only `.html` and `.json` files are scanned.
+2. **(Optional) Select a reference directory.** If you selected a single JSON file, a second step appears. Pick the directory of HTML files that use those links so the app can match link IDs to their on-page context.
+3. **(Optional) Enter a site name.** This is only used to name the exported CSV file.
+4. **Start the link check.** The app checks each link in turn and updates the progress bar.
+5. **Review the results.** Use the **Broken**, **Redirects**, and **All** tabs to filter, click any column header to sort, and use **Show Column Controls** to toggle columns.
+6. **Export.** Click **CSV** to download the currently selected tab. The file is named `<site-name>-<category>-<date>.csv` (e.g. `my-site-broken_links-2026-10-13.csv`).
+
+> **Tip:** For redirects, click the destination URL in the *Details* column to open it. If a "redirected" link lands on something unrelated or suspicious, treat the original URL as a problem link and include it in your broken-link report.
+
+## Technologies
+
+| Layer | Technology | Purpose |
+| --- | --- | --- |
+| UI framework | [Vue 3](https://vuejs.org/) (Composition API, `<script setup>`) | Reactive single-page interface |
+| Build tool / dev server | [Vite](https://vite.dev/) | Fast dev server and production bundling; proxies `/api` to the local server |
+| Link-check server | [Express](https://expressjs.com/) | Small local Node server that performs the actual HTTP requests |
+| HTTP client (server) | [Axios](https://axios-http.com/) | Makes the request for each link without following redirects |
+| Styling | [Sass](https://sass-lang.com/) (SCSS, BEM naming) | Component styles |
+| Process runner | [concurrently](https://www.npmjs.com/package/concurrently) | Runs the Express server and Vite dev server together |
+| Documentation | [JSDoc](https://jsdoc.app/) | Generates HTML docs from the source comments |
+| Runtime | [Node.js](https://nodejs.org/) | v22.12.0 or higher recommended |
+
+**Why a local server?** Browsers block most cross-origin requests (CORS), so the app can't check arbitrary URLs directly from the page. The Express server runs locally and performs each request with `maxRedirects: 0`, which is what lets it detect redirects without following them. Vite's dev server proxies `/api/*` to that server on port `3000`.
+
+## Prerequisites
+
+- [Node.js](https://nodejs.org/) (v22.12.0 or higher recommended). You can use [nvm](https://github.com/nvm-sh/nvm) to manage Node.js versions.
+  ```bash
+  nvm install 22.12.0
+  nvm use 22.12.0
+  ```
+
+## Setup
+
+1.  **Clone the repository:**
+    ```bash
+    git clone <repository-url>
+    cd "Broken-Link-Checker"
     ```
 
-# How To Use 
-### (**NOTE**: these commands assume you are in the Broken-Link-Checker Directory when you call them): `<download-location>/Broken-Link_Checker`
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-## For Old Courses (No use of link API)
-1. Depending on your Operating System you will use one of two files, run.ps1 or run.sh.
-    - Look at the **course structure** to pick **FLAGS**: 
-        - No folders: -nf
-        - Folders: -f
-    - Windows: `.\run.ps1 -nf` or `.\run.ps1 -f`
-    - Mac/Linux: `chmod +x run.sh` then `./run.sh -nf` or `./run.sh -f`
-    - ***NOTE Windows:*** Your Sys Admin may have blocked scripts from running on your computer for security purposes, if so follow `The Complete Process`. 
-    - ***IMPORTANT:*** If you run the program using these scripts you do not need to use the commandline to run programs anymore. All of the program executions are done for you. The points below explain what to select and where to find the broken links.
-2.  
-- Windows:
-    ```
-    .\run.ps1 [Flag]
-    ```
-- Mac/Linux:
-    ```
-    ./run.sh [Flag]
-    ```
-3. select the folder(s) indicated on the terminal in sequential order, it may say the folder for the course, the content folder, the links.json file, or the links2.json
-    - Depends on the selected flag, you should be prompted for a specific folder. If not, look at `The Complete Process` for detailed steps of what to do next
-4. When you see `Running broken-link-check.py...` select the `links2.json` file in the `Broken-Link-Checker` folder on your computer
-    - After all the correct files are selected, the links are tested
-    - All broken links are found in `broken_links.json`
-5. Check `redirected_links.txt` for any weird sites by clicking on the link to the right of `Redirected To`.
-    - If this link takes you somewhere weird (gambling site, adult site, unrelated to course content) 
-    - Then the link on the left of `Redirected to` must be incluided in the Broken Link Report
+## Usage
 
-## Courses with the link API
-1. Run `broken-link-check.py`:
-- Windows: 
-    ```
-    python .\broken-link-check.py
-    ```
-- Mac/Linux:
-    ```
-    python3 ./broken-link-check.py
-    ```
-2. In the file explorer window that opens, select `data/<JSON File with links>` (usually `data/links.json`)
-3. When prompted in the console, type the name of the array object you want to parse. This can be `links`, `resources`, `items`, etc. 
-- See step 6 of `The Complete Process` for examples if you don't know what to look for.
-4. Output is placed in `broken_links.json` in the same format provided
+### Running the Development Server
 
-## The Complete Process
-1. The first program we use is `find_link.py`.
-    - We use it differently depending on the structure of the course: 
-        - HTML files are ***not in*** folders within `<course-name>/content`:
-            1. Windows: `python .\find_links.py -nf`
-            2. Mac/Linux: `python3 ./find_links.py -nf`
-        - HTML files are **in** folders within `<course-name>/content`:
-            1. Windows: `python .\find_links.py -f`
-            2. Mac/Linux: `python3 ./find_links.py -f`
-        
-2. Run `find_links.py` and select the following in this order, using the file explorer that comes up: 
-    1. Directory containing the course
-    2. Directory containing the course content
-3. This will output `links2.json` in the directory for this program
-4. Run `broken-link-check.py`
-    -  This will open the windows file explorer
-5. Select the JSON file that contains the links you want to parse (`links2.json` or `data/links.json`)
-    - Note the file MUST be in JSON format
-    - All the JSON file needs to include is a key labeled `url` to check the website
-    - The program will run it's course printing to the terminal when a site is considered broken
-    - For resons other than an immediate 404 status code, additional context will be provided
-    - Output is placed in `broken_links.json` in the same format provided
-6. The console will prompt you to type the name of the array object you want to parse.
-    - Any use of the linkApi (usually newer BEESS courses) will usually be titled "links"
-    - Other projects maybe titled "resources"
-    - ***Check your JSON file for the correct object name***
-    ```
-    Example: links.json
-        {
-        vvvv THIS IS THE ARRAY OBJECT (has [])
-        "links": [{
-            "linkId": "1",
-            "title": "Deciding to Teach Them All",
-            "url": "http://www.ascd.org/publications/educational-leadership/oct03/vol61/num02/Deciding-to-Teach-Them-All.aspx",
-            "tags": "etpswd,unit1,resource,tswd,tswd-unit3",
-            "isExternal": true
-            }]
-        }
-    ```
-7. In the same directory as the `broken-link-check.py` you will find the `broken_links.json` file, containing all of the links deemed 'broken' along with the error. 
-8. The `file` key indicates the HTML file that conatins the link. You must match this file to the url assigned in the `data/Pages.json` file ***(Suggested if content on webpage does not match html file).***
+To run the application in development mode, which includes a local server to handle link checking requests:
 
-## Final step and its purpose 
-- Sometimes websites are hijacked by malicious actors and redirect users to their websites. 
-- For Example, say you go to **abc.com** but this website has been hijacked and redirects you to **gambling.com**. Now, it will rarely _(if ever)_ be this obviuous. Usually, URLs will look totally normal at a glance but when we go to the website it has undesireable content.
-- ### How do I check for instances like these?
-    - After you run `broken-link-check.py` a text file titled `redirected_links.txt` will appear in the folder for this program. This text file will contain the following text (one per line): 
-    ```{URL} Redirected to {Redirected URL} ```
-    - Clicking on the `Redirected URL` will take you to a links final destination. If this site looks off note the `URL` and find its location using `broken_links.json`. 
+```bash
+npm start
+```
+
+This will start the Vite development server and a Node.js Express server concurrently. You can access the application at the URL provided by Vite (usually `http://localhost:5173`).
+
+### Building for Production
+
+To build the application for production:
+
+```bash
+npm run build
+```
+
+This will create a `dist` directory with the production-ready files. You can then serve the contents of the `dist` directory with a static file server.
+
+### Previewing the Production Build
+
+To preview the production build locally:
+
+```bash
+npm run preview
+```
+
+### Generating Documentation
+
+To generate html pages that document all functions:
+```bash
+./node_modules/.bin/jsdoc src/js/LinkChecker.js
+```
+- This will create a folder named `out` and you can run the html pages on the browser for a quick overview.
+- Documentation can also be found inline in `src/js/LinkChecker.js`
+
+## Project Structure
+
+```
+├── index.html              # App entry point
+├── server.cjs              # Express server that checks links (/api/check-link)
+├── vite.config.js          # Vite config (Vue plugin + /api proxy)
+├── package.json
+└── src/
+    ├── main.js             # Vue app bootstrap
+    ├── App.vue             # Root component
+    ├── style.css           # Global styles
+    ├── components/
+    │   └── LinkChecker.vue # Main UI (source selection, stats, results table)
+    ├── js/
+    │   └── LinkChecker.js  # useLinkChecker() composable: scanning, checking, CSV export
+    └── scss/               # SCSS partials (BEM) for each UI section
+```
+
+## Additional Links
+
+- [Broken-Link-Checker (original Python project)](https://github.com/JoseBrouwer/Broken-Link-Checker)
+- [Issues](https://github.com/JoseBrouwer/Broken-Link-Checker/issues)
+- [Pull requests](https://github.com/JoseBrouwer/Broken-Link-Checker/pulls)
+
