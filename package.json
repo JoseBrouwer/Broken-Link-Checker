@@ -1,0 +1,25 @@
+{
+  "name": "link-checker",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "concurrently \"node server.cjs\" \"npm run dev\"",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "nvm": "nvm install 22.12.0 && nvm use 22.12.0"
+  },
+  "dependencies": {
+    "axios": "^1.13.2",
+    "express": "^5.2.1",
+    "sass": "^1.95.0",
+    "vue": "^3.5.24"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.1",
+    "concurrently": "^9.2.1",
+    "jsdoc": "^4.0.5",
+    "vite": "^7.2.4"
+  }
+}

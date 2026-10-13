@@ -1,0 +1,22 @@
+@use 'settings' as *;
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  &__logo {
+    background-color: $primary-color;
+    color: white;
+    border-radius: 8px;
+    padding: 0.5rem;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__title {
+    font-size: 1.75rem;
+    margin: 0;
+  }
+}

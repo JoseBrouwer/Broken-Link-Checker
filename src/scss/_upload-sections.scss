@@ -1,0 +1,49 @@
+@use 'settings' as *;
+.selection-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eef4ff;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  margin-top: 1rem;
+
+  p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: $primary-color;
+  }
+
+  &__clear-btn {
+    background: none;
+    border: 1px solid $primary-color;
+    color: $primary-color;
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    width: auto;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: #f0f0f0;
+      color: #FFF;
+    }
+  }
+}
+
+.scan-info {
+  font-size: 0.8rem;
+  color: $subtitle-color;
+  text-align: center;
+}
+
+.reference-section {
+  margin-top: 1.5rem;
+
+  hr {
+    border: none;
+    border-top: 1px solid $border-color;
+    margin: 1.5rem 0;
+  }
+}

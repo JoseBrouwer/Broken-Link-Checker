@@ -1,0 +1,24 @@
+@use 'settings' as *;
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  text-align: center;
+}
+
+.stat {
+  &__value {
+    font-size: 2rem;
+    font-weight: bold;
+
+    &--broken { color: $stat-broken-color; }
+    &--redirects { color: $stat-redirects-color; }
+    &--checked { color: $stat-checked-color; }
+  }
+
+  &__label {
+    font-size: 0.75rem;
+    color: $subtitle-color;
+    text-transform: uppercase;
+  }
+}

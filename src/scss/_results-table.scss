@@ -1,0 +1,106 @@
+@use 'settings' as *;
+.results-table {
+    overflow-x: auto;
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+
+        th, td {
+        padding: 0.75rem 1rem;
+        text-align: left;
+        border-bottom: 1px solid $border-color;
+        white-space: nowrap;
+        vertical-align: top;
+        }
+
+        th {
+        font-size: 0.85rem;
+        color: $subtitle-color;
+        font-weight: 600;
+        background-color: #f0f0f0;
+        text-transform: uppercase;
+
+        &.sortable {
+            cursor: pointer;
+        }
+        }
+
+        tbody {
+        tr:nth-child(even) {
+            background-color: #f5f5f5;
+        }
+        }
+    }
+
+    .table-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        white-space: nowrap;
+
+        &__arrows {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 0.2em;
+            margin-left: 0.5em;
+            margin-right: 0;
+            position: static;
+            white-space: nowrap;
+
+            span {
+                font-size: 0.7rem;
+                line-height: 0.7;
+                color: #ccc;
+                transition: color 0.2s;
+
+                &.active {
+                    color: $primary-color;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .status-badge {
+        padding: 0.25rem 0.5rem;
+        border-radius: 12px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        text-transform: capitalize;
+
+        &--working { background-color: #e4f8e4; color: #34a853; }
+        &--broken { background-color: #fce8e6; color: #ea4335; }
+        &--redirecting { background-color: #feefc3; color: #fbbc05; }
+        &--redirecting-secure { background-color: #e6f4ea; color: #34a853; }
+        &--pending { background-color: #e8f0fe; color: #4285f4; }
+    }
+
+    .no-links {
+        text-align: center;
+        padding: 3rem;
+        color: $subtitle-color;
+
+        svg {
+            margin-bottom: 1rem;
+            color: #ccc;
+        }
+    }
+
+    td.url-cell,
+    td.details-cell {
+        white-space: normal;
+        word-break: break-all;
+    }
+
+    td.link-text-cell {
+        white-space: normal;
+        word-break: break-word;
+    }
+
+    td.source-file-cell {
+        white-space: normal;
+        word-break: break-all;
+    }
+}
